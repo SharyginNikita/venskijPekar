@@ -1,0 +1,45 @@
+extends ../layout/layout.pug
+
+block content
+
+    .home
+
+        section.section.home-swiper
+
+            .home-swiper__prev
+                i.material-icons-round arrow_back_ios
+
+            .home-swiper__next
+                i.material-icons-round arrow_back_ios
+
+            .home-swiper__pagination
+
+            .home-swiper__wrapper
+
+                .home-swiper__slide
+                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" width="100%")
+
+                .home-swiper__slide
+                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg" width="100%")
+
+                .home-swiper__slide
+                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg" width="100%")
+
+        section.section.home-stocks
+
+            h2.title Акции
+
+            .home-stoks__wrapper
+
+                - for(let x = 0; x < 3; x++)
+
+                    .home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="https://xn----8sbembqhgey0ape7n.xn--p1ai/upload/resize_cache/iblock/c66/385_210_2/c66bc0902903598690ac469a9249c1cf.jpg" width="100%")
+
+                        .home-stoks__card-title Мясная среда
+
+block append scripts
+    script(src='./js/home.js')

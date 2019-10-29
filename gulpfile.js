@@ -1,4 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
+const Fiber = require('fibers');
 const webpack = require('webpack-stream');
 
 const pug = require('gulp-pug');
@@ -28,7 +29,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const config = require('./config.js');
 const dir = config.dir;
+
 let env = process.env.NODE_ENV;
+
+sass.compiler = require('sass');
 
 console.log(env);
 
@@ -36,7 +40,7 @@ console.log(env);
 function buildPug() {
     return src(`${dir.pug}pages/*.pug`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(changed(`${dir.public}`, {extension: '.html'}))
+        //.pipe(changed(`${dir.public}`, {extension: '.html'}))
         .pipe(pug())
         .pipe(prettify({}))
         .pipe(dest(`${dir.public}`))
@@ -47,9 +51,7 @@ function buildScss() {
     return src(`${dir.scss}*.scss`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(gulpif(env === 'development', sourcemaps.init()))
-        .pipe(sass({
-            includePaths: ['./node_modules/hamburgers/_sass/hamburgers']
-        }).on('error', sass.logError))
+        .pipe(sass({fiber: Fiber}).on('error', sass.logError))
         .pipe(autoprefixer({
             grid: true
         }))
