@@ -10,36 +10,127 @@ block content
                 i.material-icons-round arrow_back_ios
 
             .home-swiper__next
-                i.material-icons-round arrow_back_ios
+                i.material-icons-round arrow_forward_ios
 
             .home-swiper__pagination
 
             .home-swiper__wrapper
 
                 .home-swiper__slide
-                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" width="100%")
+                    img(src="https://www.shoes-bags.ru/upload/iblock/f49/f4942bcf974863d2593343388df3d2ed.jpg" width="100%")
+        section.section.home-stoks
 
-                .home-swiper__slide
-                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg" width="100%")
+            h2.title.title_h2 Акции
 
-                .home-swiper__slide
-                    img(src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(47).jpg" width="100%")
-
-        section.section.home-stocks
-
-            h2.title Акции
+            .description.description_center.
+                Сделайте середину недели сытнее, слаще и вкуснее с пирогами от венского пекаря!
+                Во вторник мы предлагаем вам скинку 20% на все пироги с мясом.
+                По средам - минус 20% на все сладкие пироги. Рыбный четверг выгоднее
+                на 20% с венским пекарем и пирогами с рыбой. 
 
             .home-stoks__wrapper
 
                 - for(let x = 0; x < 3; x++)
 
-                    .home-stoks__card
+                    a(href="#").home-stoks__card
 
                         .home-stoks__card-overlay
 
-                            img.home-stoks__card-image(src="https://xn----8sbembqhgey0ape7n.xn--p1ai/upload/resize_cache/iblock/c66/385_210_2/c66bc0902903598690ac469a9249c1cf.jpg" width="100%")
+                            img.home-stoks__card-image(src="https://xn----8sbembqhgey0ape7n.xn--p1ai/upload/resize_cache/iblock/c66/385_210_2/c66bc0902903598690ac469a9249c1cf.jpg" width="100%" heigth="100%")
 
                         .home-stoks__card-title Мясная среда
+
+        section.section.product
+        
+            .product-swiper
+
+                .product-swiper__prev.waves-effect.waves-light
+        
+                    i.material-icons-round arrow_back_ios
+                
+                .product-swiper__next.waves-effect.waves-light
+
+                    i.material-icons-round arrow_forward_ios
+
+                .product-swiper__pagination
+
+                .product-swiper__wrapper
+
+                    - for (let x = 0; x < 9; x++)
+
+                        .product-swiper__slide
+
+                            .card-product
+                                
+                                img.card-product__image(src="https://венский-пекарь.рф/upload/iblock/e11/e11ade8b2878c8ab9cccc93da9af4a9f.jpg" width="100%")
+
+                                .card-product__content
+
+                                    .card-product__wrapper
+
+                                        h4.card-product__title «Черничное наслаждение» 880 гр
+
+                                        .card-product__tags
+
+                                            .card-product__tag Новинка
+
+                                            .card-product__tag.card-product__tag_blue Новинка
+
+                                    .card-product__footer
+
+                                        .card-product__price 990₽
+
+                                        button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+        section.section.news
+
+            .news-swiper
+
+                .news-swiper__prev.waves-effect.waves-light
+        
+                    i.material-icons-round arrow_back_ios
+                
+                .news-swiper__next.waves-effect.waves-light
+
+                    i.material-icons-round arrow_forward_ios
+
+                .news-swiper__pagination
+
+                .news-swiper__wrapper
+
+                    - for (let x = 0; x < 4; x++)
+
+                        .news-swiper__slide
+
+                            .card-article
+
+                                .card-article__overlay.waves-effect.waves-light
+
+                                    img.card-article__image(src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%").cart-article__image
+
+                                .card-article__wrapper
+
+                                    .card-article__wrapper-top
+
+                                        h4.card-article__title Заказ пирогов и тортов через 
+
+                                        i.material-icons more_vert
+
+                                    a(href="#").card-article__link Узнать больше
+
+                                .card-article__reveal
+
+                                    .card-article__wrapper-top
+
+                                        h4.card-article__title Заказ пирогов и тортов через 
+
+                                        i.material-icons close
+
+                                    .card-article__reveal-content
+                                        span.
+
+                                            Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами. 
+                                            Торт в красивой прозрачной упаковке  станет прекрасным подарком как для педагога, так и для вашего школьника.
 
 block append scripts
     script(src='./js/home.js')

@@ -14,9 +14,31 @@
     padding: 0;
 
     font-family: global.$font-default;
+    color: global.$color-text;
+}
+
+.section {
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 a {
     text-decoration: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:-moz-focus-inner {
+        border: 0;
+    }
 }
 

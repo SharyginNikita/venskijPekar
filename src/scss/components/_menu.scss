@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
 
+    width: 100%;
+
     margin: 0;
     padding: 0;
 
@@ -16,15 +18,19 @@
     &__link {
         height: 100%;
         box-sizing: border-box;
-        padding: 8px;
+        //padding: 8px;
 
-        color: #fff;
+        text-transform: uppercase;
         text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
 
-        transition: .3s background-color;
+        color: global.$color-text;
+    
+        transition: .3s color;
 
         &:hover {
-            background-color: rgba(255, 255, 255, .1);
+            color: global.$color-acent;
         }
     }
 }

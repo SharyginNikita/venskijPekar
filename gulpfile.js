@@ -82,7 +82,7 @@ function buildJsProd() {
 exports.buildJsProd = buildJsProd;
 
 function buildImages() {
-    return src([`${dir.images}**/*` ,`!${dir.images}svgStore/*`])
+    return src(`${dir.images}**/*`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(changed(`${dir.public}images`))
         .pipe(imagemin([
@@ -101,20 +101,18 @@ function buildImages() {
 }; 
 exports.buildImages = buildImages;
 
-function svgStore() {
-    return src(`${dir.images}svgStore/*.svg`)
-        .pipe(svgstore())
-        .pipe(dest(`${dir.images}svgStore`));
-}
-exports.svgStore = svgStore;
-
 function buildFonts() {
     return src(`${dir.fonts}`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(changed(`${dir.public}fonts`))
         .pipe(dest(`${dir.public}fonts`))
 };
 exports.buildFonts = buildFonts;
+
+function buildIcons() {
+    return src('./node_modules/font-awesome/fonts/*')
+        .pipe(dest(`${dir.public}assets/webfonts/`));
+};
+exports.buildIcons = buildIcons;
 
 function testPug() {
     return src([`${dir.pug}**/*.pug`, `!${dir.pug}mixins/**`])
@@ -158,15 +156,15 @@ function watcher() {
     watch(`${dir.pug}**/*.pug`, series(buildPug, reload));
     watch(`${dir.scss}**/*.scss`, series(buildScss, reload));
     watch([`${dir.js}`, `${dir.vue}`], series(buildJsDev, reload));
-    watch(`${dir.images}**/*`, series(buildImages, svgStore, reload));
+    watch(`${dir.images}**/*`, series(buildImages, reload));
     watch(`${dir.fonts}`, series(buildFonts, reload));
 }
 exports.watcher = watcher;
 
 
-exports.default = series(svgStore, buildImages, buildPug, buildScss, buildJsDev, buildFonts, serve, watcher);
-exports.gulpProd = series(svgStore, buildImages, buildPug, buildScss, buildJsProd, buildFonts, serve, watcher);
-exports.build = parallel(svgStore, buildImages,  buildPug, buildScss, buildJsDev, buildFonts);
+exports.default = series(buildImages, buildPug, buildScss, buildJsDev, buildFonts, buildIcons, serve, watcher);
+exports.gulpProd = series(buildImages, buildPug, buildScss, buildJsProd, buildFonts, buildIcons, serve, watcher);
+exports.build = parallel(buildImages,  buildPug, buildScss, buildJsDev, buildFonts, buildIcons);
 exports.test = series(testPug, testScss);
 
 

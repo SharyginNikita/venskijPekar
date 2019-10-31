@@ -1,5 +1,47 @@
 header.header
 
+    .header__top
+
+        a(href="#").header__logo
+
+            img(src="/images/logo.png" width="100%")
+
+        .header-toolbar
+
+            form.header-search
+
+                input(type="text" placeholder="Искать")#t.header-search__input
+
+                label.header-search__label(for="t")
+
+                    i.material-icons-round.header-search__search-icon search
+
+                //-i.material-icons-round.header-search__close close
+
+            .header-toolbar__bottom
+
+                .header-toolbar__phone-number +7 (495) 123-456-78-90
+
+                .header-toolbar__wrapper
+
+                    .header-toolbar__person
+
+                        i.material-icons-outlined.header-toolbar__person-icon person_outline
+
+                        .header-toolbar__person-text Войти
+
+                    .header-toolbar__favorite
+
+                        i.material-icons-outlined.header-toolbar__favorite-icon favorite_border
+
+                        .header-toolbar__favorite-text Избранное
+
+                    .header-toolbar__cart
+
+                        i.material-icons-outlined.header-toolbar__cart-icon shopping_cart
+
+                        .header-toolbar__cart-text Корзина
+
     nav.header-nav
 
         .header-nav__wrapper
@@ -10,43 +52,23 @@ header.header
 
                     .menu__item.menu__item_level_0
 
-                        .menu__link.menu__link_level_0.waves-effect.waves-light О компании
+                        a(href="#").menu__link.menu__link_level_0 О компании
 
                     .menu__item.menu__item_level_0
 
-                        .menu__link.menu__link_level_0.waves-effect.waves-light Оплата
+                        a(href="#").menu__link.menu__link_level_0 Оплата
 
                     .menu__item.menu__item_level_0
 
-                        .menu__link.menu__link_level_0.waves-effect.waves-light Акции
+                        a(href="#").menu__link.menu__link_level_0 Акции
 
                     .menu__item.menu__item_level_0
 
-                        .menu__link.menu__link_level_0.waves-effect.waves-light Контакты
+                        a(href="#").menu__link.menu__link_level_0 Контакты
 
                     .menu__item.menu__item_level_0
 
-                        .menu__link.menu__link_level_0.waves-effect.waves-light Детские мастер классы
-
-            .header-nav__bottom
-
-                a.logo(href="#")
-
-                    img(src)
-
-                form.header-nav-search
-
-                    label.header-nav-search__label
-
-                    input(type="search").header-nav-search__input
-
-                .header-nav__phone-number 21-15-21
-
-                .header-nav__cart
-
-                    .header-nav__cart-icon
-
-                    .header-nav__cart-value
+                        a(href="#").menu__link.menu__link_level_0 Детские мастер классы
 
 
 
