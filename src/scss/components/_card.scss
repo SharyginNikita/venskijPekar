@@ -1,26 +1,57 @@
 @use '../utils/vars' as global;
 
-.product, .news {
+.product,
+.news {
     position: relative;
 
     width: 100%;
     max-width: global.$width-container;
 }
 
-.product-swiper, .news-swiper {
+.product-swiper,
+.news-swiper {
     width: 100%;
 
     overflow: hidden;
 
     box-sizing: border-box;
-    padding: 10px 10px 60px 10px;
+    padding: 10px 6px 60px 6px;
+
+    @media screen and (max-width: 556px) {
+        padding: 0;
+    }
+
+    &__overlay {
+        @media screen and (max-width: 556px) {
+            margin-bottom: -10px;
+        }
+    }
 
     &__wrapper {
         display: flex;
+
+        @media screen and (max-width: 556px) {
+            box-sizing: border-box;
+            padding: 20px 6px 20px 10px;
+
+            overflow: auto;
+
+            -webkit-overflow-scrolling: touch;
+        }
     }
 
     &__slide {
         flex-shrink: 0;
+
+        @media screen and (max-width: 556px) {
+            margin-right: 20px;
+
+            max-width: 73vw;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 
     &__prev,
@@ -39,6 +70,10 @@
         cursor: pointer;
 
         color: #fff;
+
+        @media screen and (max-width: 1196px) {
+            display: none !important;
+        }
     }
 
     &__prev {
@@ -79,7 +114,7 @@
         border-radius: 50%;
         margin-right: 4px;
         background-color: global.$color-acent;
-        opacity: .5;
+        opacity: 0.5;
 
         z-index: 3;
         transition: 0.3s ease opacity, padding;

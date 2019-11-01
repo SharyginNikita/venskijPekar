@@ -44,42 +44,92 @@ header.header
 
     nav.header-nav
 
-        .header-nav__wrapper
+            ul.menu.menu_level-0
 
-            .header-nav__top
+                li.menu__item.menu__item_level-0
 
-                .menu.menu_level_0
+                    a(href="#").menu__link.menu__link_level-0 Каталог
 
-                    .menu__item.menu__item_level_0
+                    ul.menu.menu_level-1
 
-                        a(href="#").menu__link.menu__link_level_0 О компании
+                        li.menu__item.menu__item_level-1
 
-                    .menu__item.menu__item_level_0
+                            a(href="#").menu__link.menu__link_level-1 Кондитерские изделия
 
-                        a(href="#").menu__link.menu__link_level_0 Оплата
+                            ul.menu.menu_level-2
 
-                    .menu__item.menu__item_level_0
+                                li.menu__item.menu__item_level-2
 
-                        a(href="#").menu__link.menu__link_level_0 Акции
+                                    a(href="#").menu__link.menu__link_level-2 Десерты
 
-                    .menu__item.menu__item_level_0
+                                li.menu__item.menu__item_level-2
 
-                        a(href="#").menu__link.menu__link_level_0 Контакты
+                                    a(href="#").menu__link.menu__link_level-2 Конфеты
 
-                    .menu__item.menu__item_level_0
+                        li.menu__item.menu__item_level-1
 
-                        a(href="#").menu__link.menu__link_level_0 Детские мастер классы
+                            a(href="#").menu__link.menu__link_level-1 Пекарня
 
+                            ul.menu.menu_level-2
 
+                                li.menu__item.menu__item_level-2
 
-                
+                                    a(href="#").menu__link.menu__link_level-2 Выпечка
 
-                
+                                li.menu__item.menu__item_level-2
 
-    
-    
-    
-    
-    
+                                    a(href="#").menu__link.menu__link_level-2 Пироги
 
+                        li.menu__item.menu__item_level-1
 
+                            a(href="#").menu__link.menu__link_level-1 Кухня
+
+                            ul.menu.menu_level-2
+
+                                li.menu__item.menu__item_level-2
+
+                                    a(href="#").menu__link.menu__link_level-2 Блюда по меню
+
+                                li.menu__item.menu__item_level-2
+
+                                    a(href="#").menu__link.menu__link_level-2 Кулинария
+
+                        li.menu__item.menu__item_level-1
+
+                            a(href="#").menu__link.menu__link_level-1 Упаковка / декор
+
+                li.menu__item.menu__item_level-0
+
+                    a(href="#").menu__link.menu__link_level-0 О компании
+
+                li.menu__item.menu__item_level-0
+
+                    a(href="#").menu__link.menu__link_level-0 Оплата
+
+                li.menu__item.menu__item_level-0
+
+                    a(href="#").menu__link.menu__link_level-0 Акции
+
+                li.menu__item.menu__item_level-0
+
+                    a(href="#").menu__link.menu__link_level-0 Контакты
+
+                li.menu__item.menu__item_level-0
+
+                    a(href="#").menu__link.menu__link_level-0 Детские мастер классы
+
+            ul.header-category
+
+                .header-category__overlay
+
+                    .header-category__wrapper
+
+                        - for (let x = 0; x < 12; x++)
+
+                            li.header-category__card
+
+                                a(href="#").header-category__link
+
+                                    .header-category__title Кондитерские изделия
+
+                                    .header-category__image
