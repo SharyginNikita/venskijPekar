@@ -36,6 +36,10 @@
         cursor: pointer;
 
         color: #fff;
+
+        i {
+            font-size:  32px;
+        }
     }
 
     &__prev {
@@ -44,8 +48,6 @@
 
     &__next {
         right: 10px;
-
-        transform: rotateZ(180deg);
     }
 
     &__pagination {

@@ -109,7 +109,7 @@ function buildFonts() {
 exports.buildFonts = buildFonts;
 
 function buildIcons() {
-    return src('./node_modules/font-awesome/fonts/*')
+    return src(['./node_modules/font-awesome/fonts/*', './submodules/material-icons-font/font/MaterialIcons.*', './submodules/material-icons-font/font/MaterialIcons-Outlined.*', './submodules/material-icons-font/font/MaterialIcons-Round.*'])
         .pipe(dest(`${dir.public}assets/webfonts/`));
 };
 exports.buildIcons = buildIcons;

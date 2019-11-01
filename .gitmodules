@@ -1,0 +1,3 @@
+[submodule "submodules/material-icons-font"]
+	path = submodules/material-icons-font
+	url = https://github.com/SharyginNikita/material-icons-font.git
