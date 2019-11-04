@@ -1,0 +1,14 @@
+$lg-path-fonts: '../assets/webfonts'!default;
+$lg-icon-bg: transparent;
+$lg-icon-color: #333;
+$lg-icon-hover-color: #000;
+$lg-toolbar-bg: transparent;
+$lg-thumb-bg: rgba(0, 0, 0, .15);
+$lg-thumb-toggle-bg: rgba(0, 0, 0, .15);
+
+.lg-backdrop {
+    background-color: #fff !important;
+}
+@import
+    "../../node_modules/lightgallery.js/src/sass/lightgallery.scss",
+    "../../node_modules/lightgallery.js/src/sass/lg-animations.scss";

@@ -1,0 +1,23 @@
+include ../mixins/mixins.pug
+
+doctype html
+html.html(lang="ru")
+
+    head
+
+        include head.pug
+
+    body.body
+
+        include header_main.pug
+
+        main.main
+
+            block content
+
+        include footer.pug
+
+        noscript У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.
+
+        block scripts
+            include scripts.pug

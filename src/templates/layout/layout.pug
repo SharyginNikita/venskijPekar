@@ -5,14 +5,7 @@ html.html(lang="ru")
 
     head
 
-        title myStartTemplate
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="msapplication-TileColor" content="#ffffff")
-        //meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")
-        meta(name="theme-color" content="#ffffff")
-        link(rel="stylesheet" href="/css/main.css")
+        include head.pug
 
     body.body
 
@@ -20,12 +13,31 @@ html.html(lang="ru")
 
         main.main
 
-            block content
+            .main__wrapper
+
+                a(href="#").page__back
+
+                .path
+
+                    ul.path__wrapper
+
+                        li.path__item
+
+                            a(href="index.html").path__link Главная
+
+                        li.path__item
+
+                            a(href="press-center.html").path__link Раздел
+
+                        li.path__item
+
+                            a(href="press-center.html").path__link Подраздел
+
+                    block content
 
         include footer.pug
 
         noscript У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.
 
         block scripts
-            script(src="/js/polyfills.js")
-            script(src="/js/main.js")
+            include scripts.pug

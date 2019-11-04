@@ -1,9 +1,39 @@
-.button {
+@use '../utils/_vars.scss' as global;
 
+.button {
     display: flex;
 
     cursor: pointer;
+}
 
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 95px;
+    width: 100%;
+    max-height: 34px;
+
+    box-sizing: border-box;
+    border: 1px #cdcdcd solid;
+    border-radius: 17px;
+    padding: 8px 13px;
+
+    &__btn {
+        cursor: pointer;
+
+        border: 0;
+        padding: 0;
+        background: transparent;
+
+        font: 22px global.$font-default;
+        color: rgba(35, 32, 32, 0.8);
+    }
+
+    &__number {
+        font: 700 18px / 14px global.$font-default;
+    }
 }
 
 // use BAM modifier

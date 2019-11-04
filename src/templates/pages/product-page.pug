@@ -1,0 +1,56 @@
+extends ../layout/layout.pug
+
+block content
+
+    article.product-page
+
+        .product-page-gallery
+
+            .product-page-gallery__container.product-page-gallery__slides
+
+                .product-page-gallery__wrapper#product-page-gallery__lightgallery
+
+                    - for(let x = 0; x <= 3; x++)
+
+                        a.product-page-gallery__slide(href="/images/product.png")
+                            img.product-page-gallery__image(src="/images/product.png")
+                        
+                .product-page-gallery__prev
+
+                .product-page-gallery__next
+        
+        .product-page-item
+
+            h1.product-page-item__title "Малиновая Рапсодия" 100 гр
+
+            .product-page-item__wrapper
+
+                .product-page-item__column
+
+                    .product-page-item__price 
+
+                        .product-page-item__price-value 95
+
+                        .product-page-item__price-currency ₽
+
+                    .counter
+
+                        button.counter__btn -
+
+                        .counter__number 1
+
+                        button.counter__btn +
+
+                .product-page-item__column
+
+                    button.product-page-item__btn-cart Добавить в корзину
+
+                        i.material-icons-round.md-add_shopping_cart.product-page-item__icon
+
+                    button.product-page-item__btn-one-click Купить в один клик   
+
+                        i.material-icons-outlined.md-touch_app.product-page-item__icon    
+
+
+block append scripts
+    script(src='./js/product-page.js')

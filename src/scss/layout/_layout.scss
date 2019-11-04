@@ -19,4 +19,110 @@
     }
 }
 
+.path {
+    margin-bottom: 70px;
 
+    @media screen and (max-width: 776px) {
+        margin-bottom: 25px;
+    }
+
+    &__wrapper-padding {
+        padding: 0 15px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+        position: relative;
+        margin-left: 23px;
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        padding-left: 15px;
+
+        @media screen and (max-width: 526px) {
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            background-color: global.$color-acent;
+            border-radius: 50%;
+            left: -2.5px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 636px) {
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        
+        color: global.$color-text;
+        white-space: nowrap;
+
+        transition: 0.3s ease;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+
+            height: 2px;
+
+            margin: 0 auto;
+
+            background-color: global.$color-acent;
+            transition: 0.5s ease width;
+        }
+
+        &:hover,
+        &_active {
+            color: global.$color-acent;
+
+            &:before {
+                width: 100%;
+            }
+        }
+
+        &:hover {
+            color: global.$color-acent;
+        }
+
+        @media screen and (max-width: 526px) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 360px) {
+            font-size: 10px;
+        }
+    }
+}

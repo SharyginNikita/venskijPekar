@@ -30,17 +30,14 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const config = require('./config.js');
 const dir = config.dir;
 
-let env = process.env.NODE_ENV;
+let env = process.env.NODE_ENV.trim();
 
 sass.compiler = require('sass');
-
-console.log(env);
 
 
 function buildPug() {
     return src(`${dir.pug}pages/*.pug`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        //.pipe(changed(`${dir.public}`, {extension: '.html'}))
         .pipe(pug())
         .pipe(prettify({}))
         .pipe(dest(`${dir.public}`))
@@ -64,7 +61,6 @@ exports.buildScss = buildScss;
 function buildJsDev() {
     return src(`${dir.js}`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        //.pipe(changed(`${dir.public}js`))
         .pipe(named())
         .pipe(webpack(require('./webpack.dev.js')))
         .pipe(dest(`${dir.public}js`))
@@ -72,7 +68,6 @@ function buildJsDev() {
 exports.buildJsDev = buildJsDev;
 
 function buildJsProd() {
-    console.log(1);
     return src(`${dir.js}`)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(named())
@@ -109,7 +104,7 @@ function buildFonts() {
 exports.buildFonts = buildFonts;
 
 function buildIcons() {
-    return src(['./node_modules/font-awesome/fonts/*', './submodules/material-icons-font/font/MaterialIcons.*', './submodules/material-icons-font/font/MaterialIcons-Outlined.*', './submodules/material-icons-font/font/MaterialIcons-Round.*'])
+    return src(['./node_modules/font-awesome/fonts/*', './submodules/material-icons-font/font/MaterialIcons.*', './submodules/material-icons-font/font/MaterialIcons-Outlined.*', './submodules/material-icons-font/font/MaterialIcons-Round.*', './node_modules/lightgallery.js/src/fonts/*'])
         .pipe(dest(`${dir.public}assets/webfonts/`));
 };
 exports.buildIcons = buildIcons;
@@ -148,6 +143,7 @@ function clear() {
         `${dir.public}css`,
         `${dir.public}js`,
         `${dir.public}images`,
+        `${dir.public}assets`
     ]);
 }
 exports.clear = clear;
