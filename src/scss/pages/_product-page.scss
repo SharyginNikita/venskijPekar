@@ -3,15 +3,19 @@
 .product-page {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 996px) {
+        flex-direction: column;
+    }
 }
 
 .product-page-gallery {
     flex-grow: 1;
 
-    max-width: 550px;
+    max-width: 500px;
     width: 100%;
 
-    margin-right: 15px;
+    margin-right: 80px;
 
     @media screen and (max-width: 996px) {
         max-width: 100%;
@@ -48,6 +52,7 @@
     }
 
     &__slide {
+        display: flex;
         flex-shrink: 0;
         flex-grow: 1;
 
@@ -148,25 +153,48 @@
 
 .product-page-item {
     flex-grow: 1;
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
+
+    &__title {
+        margin: 0 0 20px 0;
     }
 
-    &__column {
+    &__wrapper {
         display: flex;
         flex-direction: column;
+    }
+
+    &__wrap {
+        display: flex;
+        
+        margin: 0 0 30px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_column {
+            flex-direction: column;
+        }
     }
 
     &__price {
         display: flex;
 
-        margin-bottom: 20px;
-
         font: 700 24px global.$font-default;
+        color: global.$color-acent;
+
+        margin-right: 20px;
 
         &-value {
            margin-right: 10px; 
+        }
+    }
+
+
+    &__buttons {
+        @media screen and (max-width: 556px) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -174,10 +202,13 @@
         display: flex;
         align-items: center;
 
+        max-width: 250px;
+
         box-sizing: border-box;
-        margin-bottom: 20px;
-        border: 0;
+        box-shadow: global.$shadow;
+        border: 2px solid global.$color-acent;
         border-radius: 50px;
+        margin-right: 20px;
         padding: 10px 25px;
         background-color: global.$color-acent;
         
@@ -186,13 +217,26 @@
         color: #fff;
 
         cursor: pointer;
+
+        transition: .3s ease;
+
+        &:hover {
+            box-shadow: global.$shadow_hover;
+        }
+
+        @media screen and (max-width: 556px) {
+            margin: 0 0 20px 0;;
+        }
     }
 
     &__btn-one-click {
         display: flex;
         align-items: center;
 
+        max-width: 250px;
+
         box-sizing: border-box;
+        box-shadow: global.$shadow;
         border: 2px solid global.$color-acent;
         border-radius: 50px;
         padding: 10px 25px;
@@ -201,9 +245,52 @@
         font: 700 14px global.$font-default;
         text-transform: uppercase;
         color: global.$color-acent;
+
+        transition: .3s ease;
+
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: global.$shadow_hover;
+        }
     }
 
     &__icon {
         margin-left: 15px;
     }
+}
+
+.product-page-props {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    &__prop {
+        display: flex;
+    
+        list-style-type: none;
+    
+        margin-bottom: 15px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        &-title {
+            max-width: 200px;
+            width: 100%;
+    
+            margin-right: 21px;
+    
+            font: 16px global.$font-default;
+            color: #616161;
+        }
+    
+        &-value {
+            font: 700 16px global.$font-default;
+            color: #424242;
+        }
+    }
+    
 }

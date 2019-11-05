@@ -14,16 +14,42 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+
         width: 100%;
         max-width: global.$width-container;
+
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+
+    &__back {
+        display: none;
+
+        z-index: 3;
+
+        &_product-page {
+            left: 30px;
+        }
+
+        @media screen and (max-width: 606px) {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+
+            display: flex;
+        }
     }
 }
 
 .path {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 
     @media screen and (max-width: 776px) {
         margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: 606px) {
+        display: none;
     }
 
     &__wrapper-padding {

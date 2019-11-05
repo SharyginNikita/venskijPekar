@@ -132,6 +132,8 @@
     &__search-icon {
         font-size: 30px;
         color: #fff;
+
+        transition: .3s ease color;
     }
 
     &__input {

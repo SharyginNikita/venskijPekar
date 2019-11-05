@@ -25,7 +25,7 @@ block content
 
             .product-page-item__wrapper
 
-                .product-page-item__column
+                .product-page-item__wrap
 
                     .product-page-item__price 
 
@@ -35,13 +35,43 @@ block content
 
                     .counter
 
-                        button.counter__btn -
+                        input.counter__input(type="text" readonly="true")
 
-                        .counter__number 1
+                        ul.counter__options
 
-                        button.counter__btn +
+                            - for (x = 1; x < 10; x++)
 
-                .product-page-item__column
+                                li.counter__options-item 
+                                
+                                    span.counter__options-number #{x}
+
+                            li.counter__options-item.counter__options-item_arbitary
+
+                                span.counter__options-number 10+
+
+                        i.material-icons-round.md-keyboard_arrow_down.counter__arrow
+
+                ul.product-page-props.product-page-item__wrap
+
+                    li.product-page-props__prop
+
+                        .product-page-props__prop-title Производитель:
+
+                        .product-page-props__prop-value Венский Пекарь
+
+                    li.product-page-props__prop
+
+                        .product-page-props__prop-title Артикул:
+
+                        .product-page-props__prop-value 123456789
+
+                    li.product-page-props__prop
+
+                        .product-page-props__prop-title Вес:
+
+                        .product-page-props__prop-value 95 грамм
+
+                .product-page-item__wrap.product-page-item__buttons
 
                     button.product-page-item__btn-cart Добавить в корзину
 
