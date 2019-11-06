@@ -1,0 +1,23 @@
+.catalog {
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        display: flex;
+
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+.catalog-filter {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 70px;
+}

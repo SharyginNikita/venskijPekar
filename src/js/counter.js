@@ -43,6 +43,7 @@ export default class Counter {
                 "click",
                 this.addOpenOptionEventHandler
             );
+            this.counterInput.focus();
         });
 
         this.counterInput.addEventListener("blur", event => {

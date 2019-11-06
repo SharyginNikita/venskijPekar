@@ -1,0 +1,101 @@
+extends ../layout/layoutPage.pug
+
+block content
+
+    article.catalog
+
+        .catalog__content
+
+            .catalog-filter
+
+                ul.catalog-filter__category.catalog-filter__category_level-0
+
+                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+
+                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Десерты
+
+                        ul.catalog-filter__category.catalog-filter__category_level-0
+
+                            li.catalog-filter__category-item.catalog-filter__category-item_level-0
+
+                                span.catalog-filter__category-value.catalog-filter__category-value_level-0 Тирамису
+
+                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+
+                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Конфеты
+
+                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+
+                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Печенья
+
+            .catalog__wrapper
+
+                - for (let x = 0; x < 9; x++)
+
+                    .card-product
+                        
+                        a(href="./product-page.html")
+                            img.card-product__image(src="/images/product.png" width="100%")
+
+                        .card-product__content
+
+                            .card-product__wrapper
+
+                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                .card-product__tags
+
+                                    .card-product__tag Новинка
+
+                                    .card-product__tag.card-product__tag_blue Новинка
+
+                            .card-product__footer
+
+                                .card-product__price 990₽
+
+                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+        section.section.product
+        
+                .product-swiper
+
+                    .product-swiper__prev.waves-effect.waves-light
+            
+                        i.material-icons-round.md-arrow_back_ios
+                    
+                    .product-swiper__next.waves-effect.waves-light
+
+                        i.material-icons-round.md-arrow_forward_ios
+
+                    .product-swiper__pagination
+
+                    .product-swiper__overlay
+
+                        .product-swiper__wrapper
+
+                            - for (let x = 0; x < 9; x++)
+
+                                .product-swiper__slide
+
+                                    .card-product
+                                        
+                                        a(href="./product-page.html")
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag Новинка
+
+                                                    .card-product__tag.card-product__tag_blue Новинка
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину

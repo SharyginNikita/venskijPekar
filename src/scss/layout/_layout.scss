@@ -12,6 +12,8 @@
     padding-bottom: 80px;
 
     &__wrapper {
+        position: relative;
+
         display: flex;
         flex-direction: column;
 
@@ -19,7 +21,7 @@
         max-width: global.$width-container;
 
         box-sizing: border-box;
-        padding: 0 15px;
+        padding: 40px 15px 0 15px;
     }
 
     &__back {
@@ -27,18 +29,22 @@
 
         z-index: 3;
 
-        &_product-page {
-            left: 30px;
-        }
-
         @media screen and (max-width: 606px) {
             position: absolute;
             top: 2px;
-            left: 10px;
+            left: 0px;
 
             display: flex;
         }
+
+        &-icon {
+            color: global.$color-text;
+        }
     }
+}
+
+.page {
+    position: relative;
 }
 
 .path {
@@ -59,6 +65,8 @@
     &__wrapper {
         display: flex;
         align-items: center;
+
+        margin: 0;
         padding: 0;
     }
 
@@ -127,7 +135,7 @@
             margin: 0 auto;
 
             background-color: global.$color-acent;
-            transition: 0.5s ease width;
+            transition: 0.3s ease width;
         }
 
         &:hover,

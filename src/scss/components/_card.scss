@@ -138,6 +138,12 @@
 
     box-shadow: global.$shadow;
 
+    transition: .3s ease;
+    
+    &:hover {
+        box-shadow: global.$shadow-hover;
+    }
+
     &__content {
         box-sizing: border-box;
         padding: 20px;
@@ -151,9 +157,12 @@
     }
 
     &__title {
+        margin-bottom: 20px;
+        
         text-align: center;
         font-size: 22px;
         font-weight: 400;
+        color: global.$color-text;
     }
 
     &__tags {

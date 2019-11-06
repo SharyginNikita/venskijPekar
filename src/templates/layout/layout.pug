@@ -1,4 +1,6 @@
 include ../mixins/mixins.pug
+include ./variables.pug
+
 
 doctype html
 html.html(lang="ru")
@@ -9,34 +11,7 @@ html.html(lang="ru")
 
     body.body
 
-        include header.pug
-
-        main.main
-
-            .main__wrapper
-
-                a(href="#").main__back
-                    i.material-icons-round.md-arrow_back_ios
-
-                .path
-
-                    ul.path__wrapper
-
-                        li.path__item
-
-                            a(href="index.html").path__link Главная
-
-                        li.path__item
-
-                            a(href="press-center.html").path__link Раздел
-
-                        li.path__item
-
-                            a(href="press-center.html").path__link Подраздел
-
-                block content
-
-        include footer.pug
+        block layoutPage
 
         noscript У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.
 

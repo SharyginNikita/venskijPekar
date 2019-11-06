@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="html" lang="ru">
+
+<head>
+    <title>myStartTemplate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!--meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")-->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/main.css?Wed Nov 06 2019 19:23:31 GMT+0300 (GMT+03:00)">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header__top"><a class="header__logo" href="/index.html"><img src="/images/logo.png" width="100%"></a>
+            <div class="header-toolbar">
+                <form class="header-search"><input class="header-search__input" type="text" placeholder="Искать" id="t"><label class="header-search__label" for="t"><i class="material-icons-round header-search__search-icon md-search"></i></label></form>
+                <div class="header-toolbar__bottom">
+                    <div class="header-toolbar__phone-number">+7 (495) 123-456-78-90</div>
+                    <div class="header-toolbar__wrapper">
+                        <div class="header-toolbar__person"><i class="material-icons-outlined header-toolbar__person-icon md-person_outline"></i>
+                            <div class="header-toolbar__person-text">Войти</div>
+                        </div>
+                        <div class="header-toolbar__favorite"><i class="material-icons-outlined md-favorite_border header-toolbar__favorite-icon"></i>
+                            <div class="header-toolbar__favorite-text">Избранное</div>
+                        </div>
+                        <div class="header-toolbar__cart"><i class="material-icons-outlined md-shopping_cart header-toolbar__cart-icon"></i>
+                            <div class="header-toolbar__cart-text">Корзина</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <ul class="menu menu_level-0">
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Каталог</a>
+                    <ul class="menu menu_level-1">
+                        <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кондитерские изделия</a>
+                            <ul class="menu menu_level-2">
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Десерты</a></li>
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Конфеты</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Пекарня</a>
+                            <ul class="menu menu_level-2">
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Выпечка</a></li>
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Пироги</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кухня</a>
+                            <ul class="menu menu_level-2">
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Блюда по меню</a></li>
+                                <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Кулинария</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Упаковка / декор</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">О компании</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Оплата</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Акции</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Контакты</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Детские мастер классы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main__wrapper">
+            <div class="page"><a class="main__back" href="#"><i class="material-icons-round md-arrow_back_ios main__back-icon"></i></a>
+                <div class="path">
+                    <ul class="path__wrapper">
+                        <li class="path__item"><a class="path__link" href="index.html">Главная</a></li>
+                        <li class="path__item"><a class="path__link" href="press-center.html">Раздел</a></li>
+                        <li class="path__item"><a class="path__link" href="press-center.html">Подраздел</a></li>
+                    </ul>
+                </div>
+                <article class="catalog">
+                    <div class="catalog__content">
+                        <div class="catalog-filter">
+                            <ul class="catalog-filter__category catalog-filter__category_level-0">
+                                <li class="catalog-filter__category-item catalog-filter__category-item_level-0"><span class="catalog-filter__category-value catalog-filter__category-value_level-0">Десерты</span>
+                                    <ul class="catalog-filter__category catalog-filter__category_level-0">
+                                        <li class="catalog-filter__category-item catalog-filter__category-item_level-0"><span class="catalog-filter__category-value catalog-filter__category-value_level-0">Тирамису</span></li>
+                                    </ul>
+                                </li>
+                                <li class="catalog-filter__category-item catalog-filter__category-item_level-0"><span class="catalog-filter__category-value catalog-filter__category-value_level-0">Конфеты</span></li>
+                                <li class="catalog-filter__category-item catalog-filter__category-item_level-0"><span class="catalog-filter__category-value catalog-filter__category-value_level-0">Печенья</span></li>
+                            </ul>
+                        </div>
+                        <div class="catalog__wrapper">
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                <div class="card-product__content">
+                                    <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                        <div class="card-product__tags">
+                                            <div class="card-product__tag">Новинка</div>
+                                            <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-product__footer">
+                                        <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section product">
+                        <div class="product-swiper">
+                            <div class="product-swiper__prev waves-effect waves-light"><i class="material-icons-round md-arrow_back_ios"></i></div>
+                            <div class="product-swiper__next waves-effect waves-light"><i class="material-icons-round md-arrow_forward_ios"></i></div>
+                            <div class="product-swiper__pagination"></div>
+                            <div class="product-swiper__overlay">
+                                <div class="product-swiper__wrapper">
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-swiper__slide">
+                                        <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                            <div class="card-product__content">
+                                                <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
+                                                    <div class="card-product__tags">
+                                                        <div class="card-product__tag">Новинка</div>
+                                                        <div class="card-product__tag card-product__tag_blue">Новинка</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-product__footer">
+                                                    <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main><noscript>У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.</noscript>
+    <script src="/js/polyfills.js?Wed Nov 06 2019 19:23:31 GMT+0300 (GMT+03:00)"></script>
+    <script src="/js/main.js?Wed Nov 06 2019 19:23:31 GMT+0300 (GMT+03:00)"> </script>
+</body>
+
+</html>

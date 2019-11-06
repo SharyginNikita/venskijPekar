@@ -78,6 +78,12 @@ cardNews.forEach(card => {
     });
 });
 
+document.querySelectorAll(".main__back").forEach(item => {
+    item.addEventListener("click", event => {
+        event.preventDefault();
+        window.history.back();
+    });
+});
 /*
 import Module from '../widgets/module/index.js'; 
 import your vue modules example
