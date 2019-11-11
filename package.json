@@ -12,6 +12,7 @@
         "test-js": "eslint '.src/js'"
     },
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "font-awesome": "^4.7.0",
         "imask": "^5.2.1",
         "lg-fullscreen.js": "^1.1.0",

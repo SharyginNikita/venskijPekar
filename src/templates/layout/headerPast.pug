@@ -20,9 +20,17 @@ header.header
 
             .header-toolbar__bottom
 
-                .header-toolbar__phone-number +7 (495) 123-456-78-90
+                .header-toolbar__top
+
+                    .header-toolbar__phone-number +7 (495) 123-456-78-90
+
+                    .header-toolbar__log-in Войти
 
                 .header-toolbar__wrapper
+
+                    .header-toolbar__search
+
+                        i.material-icons-round.md-search
 
                     .header-toolbar__person
 
@@ -41,6 +49,7 @@ header.header
                         i.material-icons-outlined.md-shopping_cart.header-toolbar__cart-icon
 
                         .header-toolbar__cart-text Корзина
+
 
     nav.header-nav
 
@@ -117,19 +126,3 @@ header.header
                 li.menu__item.menu__item_level-0
 
                     a(href="#").menu__link.menu__link_level-0 Детские мастер классы
-
-            ul.header-category
-
-                .header-category__overlay
-
-                    .header-category__wrapper
-
-                        - for (let x = 0; x < 12; x++)
-
-                            li.header-category__card
-
-                                a(href="#").header-category__link
-
-                                    .header-category__title Кондитерские изделия
-
-                                    .header-category__image

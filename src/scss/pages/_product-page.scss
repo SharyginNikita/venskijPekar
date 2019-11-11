@@ -2,10 +2,17 @@
 
 .product-page {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
-    @media screen and (max-width: 996px) {
-        flex-direction: column;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 996px) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -35,14 +42,6 @@
         //min-height: 326px;
 
         overflow: hidden;
-
-        @media screen and (max-width: 606px) {
-            height: 240px;
-        }
-
-        @media screen and (max-width: 416px) {
-            height: 190px;
-        }
     }
 
     &__wrapper {
@@ -52,7 +51,6 @@
     }
 
     &__slide {
-        display: flex;
         flex-shrink: 0;
         flex-grow: 1;
 
@@ -123,11 +121,13 @@
             transition: 0.1s;
         }
 
-        &:hover {
-            background-color: #7cddfd;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: #7cddfd;
 
-            &:before {
-                border-color: #fff;
+                &:before {
+                    border-color: #fff;
+                }
             }
         }
 
@@ -165,7 +165,7 @@
 
     &__wrap {
         display: flex;
-        
+
         margin: 0 0 30px 0;
 
         &:last-child {
@@ -186,10 +186,9 @@
         margin-right: 20px;
 
         &-value {
-           margin-right: 10px; 
+            margin-right: 10px;
         }
     }
-
 
     &__buttons {
         @media screen and (max-width: 556px) {
@@ -199,38 +198,40 @@
     }
 
     &__btn-cart {
-        display: flex;
+        display: flex !important;
         align-items: center;
 
         max-width: 250px;
 
         box-sizing: border-box;
         box-shadow: global.$shadow;
-        border: 2px solid global.$color-acent;
+        border: 0;
         border-radius: 50px;
         margin-right: 20px;
         padding: 10px 25px;
         background-color: global.$color-acent;
-        
+
         font: 700 14px global.$font-default;
         text-transform: uppercase;
         color: #fff;
 
         cursor: pointer;
 
-        transition: .3s ease;
+        transition: 0.3s ease;
 
-        &:hover {
-            box-shadow: global.$shadow_hover;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                box-shadow: global.$shadow_hover;
+            }
         }
 
         @media screen and (max-width: 556px) {
-            margin: 0 0 20px 0;;
+            margin: 0 0 20px 0;
         }
     }
 
     &__btn-one-click {
-        display: flex;
+        display: flex !important;
         align-items: center;
 
         max-width: 250px;
@@ -246,12 +247,14 @@
         text-transform: uppercase;
         color: global.$color-acent;
 
-        transition: .3s ease;
+        transition: 0.3s ease;
 
         cursor: pointer;
 
-        &:hover {
-            box-shadow: global.$shadow_hover;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                box-shadow: global.$shadow_hover;
+            }
         }
     }
 
@@ -268,29 +271,28 @@
 
     &__prop {
         display: flex;
-    
+
         list-style-type: none;
-    
+
         margin-bottom: 15px;
-    
+
         &:last-child {
             margin-bottom: 0;
         }
-    
+
         &-title {
             max-width: 200px;
             width: 100%;
-    
+
             margin-right: 21px;
-    
+
             font: 16px global.$font-default;
             color: #616161;
         }
-    
+
         &-value {
             font: 700 16px global.$font-default;
             color: #424242;
         }
     }
-    
 }

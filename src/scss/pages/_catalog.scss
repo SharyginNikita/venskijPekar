@@ -1,17 +1,126 @@
+@use '../utils/vars' as global;
+
 .catalog {
     display: flex;
     flex-direction: column;
 
     &__content {
         display: flex;
-
-        margin-bottom: 60px;
     }
 
     &__wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        flex-direction: column;
+    }
+
+    &__category {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            top: 0;
+            background-color: #fff;
+
+            box-sizing: border-box;
+            //box-shadow: global.$shadow;
+            padding: 5px 10px;
+
+            z-index: 5;
+            font: 700 16px global.$font-default;
+            margin-bottom: 20px;
+
+            position: sticky;
+
+            border-radius: 0 0 25px 25px;
+        }
+
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            @media screen and (max-width: 1056px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media screen and (max-width: 556px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__buttons {
+        display: none;
+        justify-content: space-between;
+
+        @media screen and (max-width: 876px) {
+            display: flex;
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        max-width: 48%;
+        width: 100%;
+
+        box-sizing: border-box;
+        box-shadow: global.$shadow;
+        border: 0;
+        border-radius: 50px;
+        padding: 7px 28px;
+        background-color: global.$color-red;
+
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        color: #fff;
+
+        cursor: pointer;
+
+        transition: 0.3s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                box-shadow: global.$shadow_hover;
+            }
+        }
+
+        &:fist-child {
+            padding: 10px 20px 10px 42px;
+        }
+
+        &:last-child {
+            padding: 10px 42px 10px 20px;
+        }
+
+        &-title {
+            width: 100%;
+            text-align: center;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .material-icons-round {
+            position: absolute;
+        }
+
+        .md-arrow_back {
+            left: 10px;
+        }
+
+        .md-arrow_forward {
+            right: 10px;
+        }
     }
 }
 
@@ -19,5 +128,99 @@
     display: flex;
     flex-direction: column;
 
-    margin-right: 70px;
+    max-width: 230px;
+    width: 100%;
+
+    margin-right: 35px;
+
+    @media screen and (max-width: 876px) {
+        display: none;
+    }
+}
+
+.catalog-categories {
+    max-height: 0;
+    overflow-y: hidden;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+
+    transition: 0.3s ease max-height;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0px;
+
+        width: 15px;
+        height: 0.9px;
+
+        border-radius: 12px;
+        background-color: global.$color-text;
+    }
+
+    &:after {
+        transform: rotateZ(90deg);
+
+        transition: 0.3s ease;
+    }
+
+    &_active {
+        &:after {
+            transform: rotateZ(0);
+        }
+    }
+
+    &_level-0 {
+        position: relative;
+
+        max-height: none;
+        overflow: visible;
+
+        margin-bottom: 40px;
+
+        &:before,
+        &:after {
+            content: none;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        box-sizing: border-box;
+        margin: 5px 0;
+        padding: 0 0 0 25px;
+        list-style-type: none;
+
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_level-0 {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        font: 300 16px global.$font-default;
+        color: global.$color-text;
+
+        transition: 0.3s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: global.$color-acent;
+            }
+        }
+
+        &_level-0 {
+            text-transform: uppercase;
+        }
+    }
 }

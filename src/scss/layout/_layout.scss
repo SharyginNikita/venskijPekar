@@ -21,7 +21,12 @@
         max-width: global.$width-container;
 
         box-sizing: border-box;
-        padding: 40px 15px 0 15px;
+        padding: 40px 15px 0px 15px;
+
+        @media screen and (max-width: 626px) {
+            padding-top: 20px;
+        }
+
     }
 
     &__back {

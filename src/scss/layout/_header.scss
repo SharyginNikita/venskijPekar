@@ -1,7 +1,10 @@
 @use '../utils/_vars.scss' as global;
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
 
     display: flex;
     flex-direction: column;
@@ -13,8 +16,22 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
         0 2px 10px 0 rgba(0, 0, 0, 0.12);
     padding: 20px 0 0;
+    background-color: #fff;
 
-    z-index: 5;
+    transform: translate3d(0, 0, 0);
+    transition: .3s ease;
+
+    &_scroll {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    @media screen and (max-width: 900px) {
+        box-shadow: none;
+    }
+
+    @media screen and (max-width: 626px) {
+        padding: 0;
+    }
 
     &__top {
         display: flex;
@@ -26,15 +43,39 @@
         padding: 0 15px;
         margin-bottom: 15px;
 
-        @media screen and (max-width: 900px){
-            display: none;
+        @media screen and (max-width: 626px) {
+            margin-bottom: 0;
+            padding: 0;
+
+            min-height: 91px;
+            box-shadow: global.$shadow;
         }
     }
 
     &__logo {
+        display: flex;
+
         max-width: 105px;
 
         margin-right: 120px;
+
+        @media screen and (max-width: 726px) {
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: 626px) {
+            position: absolute;
+            top: 10px;
+            left: 13px;
+
+            max-width: 70px;
+            max-height: 70px;
+            margin-right: 0;
+
+            box-shadow: global.$shadow;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.4),0 1px 4px 0 rgba(0,0,0,.4);
+            border-radius: 50%;
+        }
     }
 }
 
@@ -45,25 +86,75 @@
     width: 100%;
     max-width: global.$width-container;
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        @media screen and (max-width: 626px) {
+            box-sizing: border-box;
+            padding: 4px 15px 4px 120px;
+            background-color: #e4caa9;
+        }
+    }
+
     &__bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         padding: 10px 0;
+
+        @media screen and (max-width: 626px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 626px) {
+            height: 100%;
+
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 626px) {
+            justify-content: flex-end;
+            align-items: center;
+            flex-grow: 1;
+
+            width: 100%;
+        }
     }
 
     &__phone-number {
         font-size: 18px;
         font-weight: 700;
         color: global.$color-text;
+
+        @media screen and (max-width: 626px) {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333 !important;
+        }
     }
 
-    &__wrapper {
-        display: flex;
-        align-items: center;
+    &__log-in {
+        display: none;
+
+        @media screen and (max-width: 626px) {
+            display: flex;
+
+            font-size: 14px;
+            color: #333;
+        }
     }
 
+    &__search,
     &__person,
     &__favorite,
     &__cart {
@@ -90,12 +181,38 @@
             margin-bottom: 4px;
 
             font-size: 30px;
+
+            @media screen and (max-width: 626px) {
+                margin-bottom: 0px;
+            }
         }
 
         &-text {
             font-size: 13px;
             font-weight: 700;
+
+            @media screen and (max-width: 626px) {
+                display: none;
+            }
         }
+    }
+
+    &__search {
+        display: none; 
+
+        @media screen and (max-width: 626px) {
+            display: flex;
+        }
+    }
+
+    &__person {
+        @media screen and (max-width: 626px) {
+            display: none;
+        }
+    }
+
+    &__cart {
+        padding-right: 20px;
     }
 }
 
@@ -107,6 +224,10 @@
     box-sizing: border-box;
     border: 2px solid global.$color-brown;
     border-radius: 4px;
+
+    @media screen and (max-width: 626px) {
+        display: none;
+    }
 
     &:hover {
         .header-search__search-icon {
@@ -133,7 +254,7 @@
         font-size: 30px;
         color: #fff;
 
-        transition: .3s ease color;
+        transition: 0.3s ease color;
     }
 
     &__input {
@@ -168,7 +289,7 @@
     overflow: hidden;
 
     @media screen and (max-width: 900px) {
-        padding: 0 0 0 9px;
+        padding: 0;
     }
 }
 
@@ -177,8 +298,10 @@
 
     width: 100%;
 
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
+
+    overflow: hidden;
 
     @media screen and (max-width: 900px) {
         display: flex;
@@ -196,10 +319,16 @@
         width: 100%;
 
         box-sizing: border-box;
-        padding: 20px 6px 20px 6px;
+        margin: 0;
+        padding: 20px 6px 20px 20px;
 
-        overflow: auto;
+        overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+
+        &:after {
+            content: "";
+            padding: 1px;
+        }
     }
 
     &__card {
@@ -209,9 +338,9 @@
         max-width: 25vw;
 
         box-shadow: global.$shadow;
-
         border-radius: 4px;
         margin-right: 20px;
+        padding-bottom: 5px;
 
         list-style: none;
 
@@ -241,6 +370,6 @@
         height: 80px;
 
         border-radius: 0 0 4px 4px;
-        background: url("/images/categories/candy.jpg") no-repeat center / cover;
+        background: no-repeat center / contain;
     }
 }

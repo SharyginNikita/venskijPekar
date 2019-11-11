@@ -19,16 +19,18 @@
 
     cursor: pointer;
 
-    &:hover,
-    &:focus-within {
-        border-bottom-color: global.$color-acent;
-        
-        .counter__input {
-            color: global.$color-acent;
-        }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover,
+        &:focus-within {
+            border-bottom-color: global.$color-acent;
 
-        .counter__arrow{
-            color: global.$color-acent;
+            .counter__input {
+                color: global.$color-acent;
+            }
+
+            .counter__arrow {
+                color: global.$color-acent;
+            }
         }
     }
 
@@ -61,11 +63,11 @@
         opacity: 0;
         z-index: -1;
 
-        transition: .15s ease;
+        transition: 0.1s ease opacity;
 
         &_active {
             opacity: 1;
-            z-index: 1;
+            z-index: 2;
         }
     }
 
@@ -76,10 +78,6 @@
         list-style-type: none;
 
         cursor: pointer;
-    }
-
-    &__options-number {
-
     }
 
     &__arrow {

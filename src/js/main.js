@@ -63,16 +63,23 @@ function initSwipers() {
     });
 }
 
-if(clientWidth >= 556) {
-    console.log(1);
+if (clientWidth >= 556) {
     initSwipers();
 }
 
 let cardNews = document.body.querySelectorAll(".card-article");
 
 cardNews.forEach(card => {
-    card.addEventListener("click", event => {
-        card.querySelector(".card-article__reveal").classList.toggle(
+    let cardToggler = card.querySelector(".card-article__wrapper-top")
+    let cardReveal = card.querySelector(".card-article__reveal");
+    cardToggler.addEventListener("click", event => {
+        cardReveal.classList.add(
+            "card-article__reveal_active"
+        );
+    });
+
+    cardReveal.addEventListener("click", event => {
+        cardReveal.classList.remove(
             "card-article__reveal_active"
         );
     });
@@ -84,6 +91,85 @@ document.querySelectorAll(".main__back").forEach(item => {
         window.history.back();
     });
 });
+
+class Menu {
+    constructor(selector) {
+        let body = document.body;
+        let menu = document.querySelector(selector);
+
+        this.body = body;
+        this.menu = menu;
+
+        this.init();
+    }
+
+    init() {
+        let menuLevelZero = document.querySelectorAll(
+            ".catalog-categories__item"
+        );
+        menuLevelZero.forEach(elem => {
+            let item = elem.getElementsByTagName("ul")[0];
+            let elemLink = elem.querySelector(".catalog-categories__link");
+            let link = elemLink.getAttribute("href");
+
+            elem.addEventListener("click", event => {
+                if (item) {
+                    item.classList.toggle("catalog-categories_active");
+
+                    event.preventDefault();
+
+                    item.addEventListener("click", event => {
+                        event.stopPropagation();
+                    });
+
+                    let elemUl = elem.getElementsByTagName("ul")[0];
+
+                    if (
+                        elemUl.style.maxHeight == 0 ||
+                        elemUl.style.maxHeight == "0px"
+                    ) {
+                        elemUl.style.maxHeight = elemUl.scrollHeight + "px";
+
+                        setTimeout(
+                            () => (elemUl.style.maxHeight = "none"),
+                            300
+                        );
+                    } else {
+                        elemUl.style.maxHeight = elem.scrollHeight + "px";
+
+                        setTimeout(() => (elemUl.style.maxHeight = 0), 100);
+                    }
+                }
+            });
+        });
+    }
+
+    toggle() {
+        this.body.style.overflow =
+            this.body.style.overflow === "" ? "hidden" : "";
+        this.menu.classList.toggle(`${this.menu.classList[0]}_active`);
+    }
+}
+
+let menu = new Menu(".catalog-categories");
+
+let header = document.body.querySelector('.header');
+let headerHeight = header.clientHeight;
+let scrollPrev = 0;
+
+
+window.addEventListener('scroll', event => {
+	let scrolled = window.pageYOffset;
+
+	if (scrolled > 100 && scrolled > scrollPrev) {
+        console.log(scrolled, scrollPrev);
+		header.classList.add('header_scroll');
+	} else {
+		header.classList.remove('header_scroll');
+	}
+	scrollPrev = scrolled;
+});
+
 /*
 import Module from '../widgets/module/index.js'; 
 import your vue modules example

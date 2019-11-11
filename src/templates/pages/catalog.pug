@@ -1,4 +1,4 @@
-extends ../layout/layoutPage.pug
+extends ../layout/layoutPage_catalog.pug
 
 block content
 
@@ -8,94 +8,132 @@ block content
 
             .catalog-filter
 
-                ul.catalog-filter__category.catalog-filter__category_level-0
+                ul.catalog-categories.catalog-categories_level-0
 
-                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+                    li.catalog-categories__item.catalog-categories__item_level-0
 
-                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Десерты
+                        a(href="#").catalog-categories__link.catalog-categories__link_level-0 Десерты
 
-                        ul.catalog-filter__category.catalog-filter__category_level-0
+                        ul.catalog-categories.catalog-categories_level-1
 
-                            li.catalog-filter__category-item.catalog-filter__category-item_level-0
+                            li.catalog-categories__item.catalog-categories__item_level-1
 
-                                span.catalog-filter__category-value.catalog-filter__category-value_level-0 Тирамису
+                                a(href="#").catalog-categories__link.catalog-categories__link_level-1 Тирамису
 
-                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+                            li.catalog-categories__item.catalog-categories__item_level-1
 
-                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Конфеты
+                                a(href="#").catalog-categories__link.catalog-categories__link_level-1 Чизкейк
 
-                    li.catalog-filter__category-item.catalog-filter__category-item_level-0
+                            li.catalog-categories__item.catalog-categories__item_level-1
 
-                        span.catalog-filter__category-value.catalog-filter__category-value_level-0 Печенья
+                                a(href="#").catalog-categories__link.catalog-categories__link_level-1 Малиновая рапсодия
+
+                    li.catalog-categories__item.catalog-categories__item_level-0
+
+                        a(href="#").catalog-categories__link.catalog-categories__link_level-0 Конфеты
+
+                        ul.catalog-categories.catalog-categories_level-1
+
+                            li.catalog-categories__item.catalog-categories__item_level-1
+
+                                a(href="#").catalog-categories__link.catalog-categories__link_level-1 Бельгийские конфеты
+
+                                ul.catalog-categories.catalog-categories_level-2
+
+                                    li.catalog-categories__item.catalog-categories__item_level-2
+
+                                        a(href="#").catalog-categories__link.catalog-categories__link_level-2 Трюфель сырный
+
+                                    li.catalog-categories__item.catalog-categories__item_level-2
+
+                                        a(href="#").catalog-categories__link.catalog-categories__link_level-2 Трюфель с фундуком
+
+                            li.catalog-categories__item.catalog-categories__item_level-1
+
+                                a(href="#").catalog-categories__link.catalog-categories__link_level-1 Леденцы, фигурки
+
+                                
+
+                    li.catalog-categories__item.catalog-categories__item_level-0
+
+                        a(href="#").catalog-categories__link.catalog-categories__link_level-0 Печенья
+
+                img(src="https://blog.asaptickets.com/wp-content/uploads/2016/10/most-delicious-deserts-from-all-over-the-world-19-min.jpg" width="100%")
 
             .catalog__wrapper
 
-                - for (let x = 0; x < 9; x++)
+                h1.title.title_h1 Конфеты
 
-                    .card-product
+                .catalog__category
+
+                    .catalog__category-title Бельгийские конфеты
+
+                    .catalog__category-wrapper
+
+                        - for (let x = 0; x < 6; x++)
+
+                            .card-product
+                                
+                                a(href="./product-page.html").card-product__overlay
+                                    img.card-product__image(src="/images/product.png" width="100%")
+
+                                .card-product__content
+
+                                    .card-product__wrapper
+
+                                        a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                        .card-product__tags
+
+                                            .card-product__tag Новинка
+
+                                            .card-product__tag.card-product__tag_blue Новинка
+
+                                    .card-product__footer
+
+                                        .card-product__price 990₽
+
+                                        button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                .catalog__category
+
+                    .catalog__category-title Леденцы, фигурки
+
+                    .catalog__category-wrapper
+
+                        - for (let x = 0; x < 6; x++)
+
+                            .card-product
+                                
+                                a(href="./product-page.html").card-product__overlay
+                                    img.card-product__image(src="/images/product.png" width="100%")
+
+                                .card-product__content
+
+                                    .card-product__wrapper
+
+                                        a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                        .card-product__tags
+
+                                            .card-product__tag Новинка
+
+                                            .card-product__tag.card-product__tag_blue Новинка
+
+                                    .card-product__footer
+
+                                        .card-product__price 990₽
+
+                                        button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                .catalog__buttons
+
+                    .catalog__button 
+                        i.material-icons-round.md-arrow_back
+
+                        .catalog__button-title Десерты      
+
+                    .catalog__button 
+                        .catalog__button-title Печенья, пряники
                         
-                        a(href="./product-page.html")
-                            img.card-product__image(src="/images/product.png" width="100%")
-
-                        .card-product__content
-
-                            .card-product__wrapper
-
-                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
-
-                                .card-product__tags
-
-                                    .card-product__tag Новинка
-
-                                    .card-product__tag.card-product__tag_blue Новинка
-
-                            .card-product__footer
-
-                                .card-product__price 990₽
-
-                                button.card-product__btn-cart.waves-effect.waves-light В корзину
-
-        section.section.product
-        
-                .product-swiper
-
-                    .product-swiper__prev.waves-effect.waves-light
-            
-                        i.material-icons-round.md-arrow_back_ios
-                    
-                    .product-swiper__next.waves-effect.waves-light
-
-                        i.material-icons-round.md-arrow_forward_ios
-
-                    .product-swiper__pagination
-
-                    .product-swiper__overlay
-
-                        .product-swiper__wrapper
-
-                            - for (let x = 0; x < 9; x++)
-
-                                .product-swiper__slide
-
-                                    .card-product
-                                        
-                                        a(href="./product-page.html")
-                                            img.card-product__image(src="/images/product.png" width="100%")
-
-                                        .card-product__content
-
-                                            .card-product__wrapper
-
-                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
-
-                                                .card-product__tags
-
-                                                    .card-product__tag Новинка
-
-                                                    .card-product__tag.card-product__tag_blue Новинка
-
-                                            .card-product__footer
-
-                                                .card-product__price 990₽
-
-                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+                        i.material-icons-round.md-arrow_forward

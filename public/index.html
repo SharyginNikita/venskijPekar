@@ -9,7 +9,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <!--meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")-->
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/css/main.css?Wed Nov 06 2019 19:23:32 GMT+0300 (GMT+03:00)">
+    <link rel="stylesheet" href="/css/main.css?Mon Nov 11 2019 19:37:37 GMT+0300 (GMT+03:00)">
 </head>
 
 <body class="body">
@@ -18,8 +18,11 @@
             <div class="header-toolbar">
                 <form class="header-search"><input class="header-search__input" type="text" placeholder="Искать" id="t"><label class="header-search__label" for="t"><i class="material-icons-round header-search__search-icon md-search"></i></label></form>
                 <div class="header-toolbar__bottom">
-                    <div class="header-toolbar__phone-number">+7 (495) 123-456-78-90</div>
+                    <div class="header-toolbar__top"><a class="header-toolbar__phone-number" href="tel:88182211521">21-15-21</a>
+                        <div class="header-toolbar__log-in">Войти</div>
+                    </div>
                     <div class="header-toolbar__wrapper">
+                        <div class="header-toolbar__search"><i class="material-icons-round md-search"></i></div>
                         <div class="header-toolbar__person"><i class="material-icons-outlined header-toolbar__person-icon md-person_outline"></i>
                             <div class="header-toolbar__person-text">Войти</div>
                         </div>
@@ -35,7 +38,7 @@
         </div>
         <nav class="header-nav">
             <ul class="menu menu_level-0">
-                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Каталог</a>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/catalog.html">Каталог</a>
                     <ul class="menu menu_level-1">
                         <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кондитерские изделия</a>
                             <ul class="menu menu_level-2">
@@ -64,63 +67,43 @@
                 <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Контакты</a></li>
                 <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Детские мастер классы</a></li>
             </ul>
-            <ul class="header-category">
-                <div class="header-category__overlay">
-                    <div class="header-category__wrapper">
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                        <li class="header-category__card"><a class="header-category__link" href="#">
-                                <div class="header-category__title">Кондитерские изделия</div>
-                                <div class="header-category__image"></div>
-                            </a></li>
-                    </div>
-                </div>
-            </ul>
         </nav>
     </header>
     <main class="main">
+        <div class="header-category">
+            <div class="header-category__overlay">
+                <ul class="header-category__wrapper">
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Десерты</div>
+                            <div class="header-category__image" style="background-image: url(https://www.zastavki.com/pictures/originals/2017Food___Cakes_and_Sweet_Cake_with_cream_and_cherry_on_a_white_background_120444_.jpg)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Конфеты</div>
+                            <div class="header-category__image" style="background-image: url(https://www.zastavki.com/pictures/originals/2017Food___Cakes_and_Sweet_Appetizing_assorted_chocolates_on_white_background_118866_.jpg)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Выпечка</div>
+                            <div class="header-category__image" style="background-image: url(https://i.pinimg.com/originals/da/be/59/dabe595a9e3e312d36b565cb070f189f.jpg)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Пироги</div>
+                            <div class="header-category__image" style="background-image: url(https://avatars.mds.yandex.net/get-pdb/1945878/c0c806cc-9b19-4b93-9113-bf63dcbf2dfa/s1200)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Блюда по меню</div>
+                            <div class="header-category__image" style="background-image: url(https://avatars.mds.yandex.net/get-pdb/33827/a8cfd723-9100-4342-ace2-1ae5a9befc11/s1200?webp=false)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Кулинария</div>
+                            <div class="header-category__image" style="background-image: url(https://s1.1zoom.ru/b5050/977/332620-svetik_1920x1200.jpg)"></div>
+                        </a></li>
+                    <li class="header-category__card"><a class="header-category__link" href="/catalog.html">
+                            <div class="header-category__title">Упаковка/декор</div>
+                            <div class="header-category__image" style="background-image: url(https://news.unipack.ru/light_editor_img/images/2015-8-17/file1439546946.jpg)"></div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
         <div class="home">
             <section class="section home-swiper">
                 <div class="home-swiper__prev"><i class="material-icons-round md-arrow_back_ios"></i></div>
@@ -139,23 +122,18 @@
                         на 20% с венским пекарем и пирогами с рыбой.
                     </div>
                     <div class="home-stoks__wrapper"><a class="home-stoks__card" href="#">
-                            <div class="home-stoks__card-overlay">
-                                <div class="home-stoks__card-image"></div>
-                            </div>
+                            <div class="home-stoks__card-overlay"><img class="home-stoks__card-image" src="/images/stock.png"></div>
                             <div class="home-stoks__card-title">Мясная среда</div>
                         </a><a class="home-stoks__card" href="#">
-                            <div class="home-stoks__card-overlay">
-                                <div class="home-stoks__card-image"></div>
-                            </div>
+                            <div class="home-stoks__card-overlay"><img class="home-stoks__card-image" src="/images/stock.png"></div>
                             <div class="home-stoks__card-title">Мясная среда</div>
                         </a><a class="home-stoks__card" href="#">
-                            <div class="home-stoks__card-overlay">
-                                <div class="home-stoks__card-image"></div>
-                            </div>
+                            <div class="home-stoks__card-overlay"><img class="home-stoks__card-image" src="/images/stock.png"></div>
                             <div class="home-stoks__card-title">Мясная среда</div>
                         </a></div>
                 </section>
                 <section class="section product">
+                    <h2 class="title title_h2">Хиты продаж</h2>
                     <div class="product-swiper">
                         <div class="product-swiper__prev waves-effect waves-light"><i class="material-icons-round md-arrow_back_ios"></i></div>
                         <div class="product-swiper__next waves-effect waves-light"><i class="material-icons-round md-arrow_forward_ios"></i></div>
@@ -163,7 +141,7 @@
                         <div class="product-swiper__overlay">
                             <div class="product-swiper__wrapper">
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -175,10 +153,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -190,10 +168,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -205,10 +183,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -220,10 +198,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -235,10 +213,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -250,10 +228,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -265,10 +243,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -280,10 +258,10 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="product-swiper__slide">
-                                    <div class="card-product"><a href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
+                                    <figure class="card-product"><a class="card-product__overlay waves-effect waves-light" href="./product-page.html"><img class="card-product__image" src="/images/product.png" width="100%"></a>
                                         <div class="card-product__content">
                                             <div class="card-product__wrapper"><a class="card-product__title" href="./product-page.html">«Черничное наслаждение» 880 гр</a>
                                                 <div class="card-product__tags">
@@ -295,7 +273,7 @@
                                                 <div class="card-product__price">990₽</div><button class="card-product__btn-cart waves-effect waves-light">В корзину</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -310,7 +288,7 @@
                         <div class="news-swiper__overlay">
                             <div class="news-swiper__wrapper">
                                 <div class="news-swiper__slide">
-                                    <div class="card-article">
+                                    <figure class="card-article">
                                         <div class="card-article__overlay waves-effect waves-light"><img class="card-article__image cart-article__image" src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%"></div>
                                         <div class="card-article__wrapper">
                                             <div class="card-article__wrapper-top">
@@ -321,14 +299,16 @@
                                             <div class="card-article__wrapper-top">
                                                 <h4 class="card-article__title">Заказ пирогов и тортов через </h4><i class="material-icons md-close"></i>
                                             </div>
-                                            <div class="card-article__reveal-content"><span>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
+                                            <div class="card-article__reveal-content">
+                                                <figcaption>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
                                                     Торт в красивой прозрачной упаковке станет прекрасным подарком как для педагога, так и для вашего школьника.
-                                                </span></div>
+                                                </figcaption>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="news-swiper__slide">
-                                    <div class="card-article">
+                                    <figure class="card-article">
                                         <div class="card-article__overlay waves-effect waves-light"><img class="card-article__image cart-article__image" src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%"></div>
                                         <div class="card-article__wrapper">
                                             <div class="card-article__wrapper-top">
@@ -339,14 +319,16 @@
                                             <div class="card-article__wrapper-top">
                                                 <h4 class="card-article__title">Заказ пирогов и тортов через </h4><i class="material-icons md-close"></i>
                                             </div>
-                                            <div class="card-article__reveal-content"><span>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
+                                            <div class="card-article__reveal-content">
+                                                <figcaption>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
                                                     Торт в красивой прозрачной упаковке станет прекрасным подарком как для педагога, так и для вашего школьника.
-                                                </span></div>
+                                                </figcaption>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="news-swiper__slide">
-                                    <div class="card-article">
+                                    <figure class="card-article">
                                         <div class="card-article__overlay waves-effect waves-light"><img class="card-article__image cart-article__image" src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%"></div>
                                         <div class="card-article__wrapper">
                                             <div class="card-article__wrapper-top">
@@ -357,14 +339,16 @@
                                             <div class="card-article__wrapper-top">
                                                 <h4 class="card-article__title">Заказ пирогов и тортов через </h4><i class="material-icons md-close"></i>
                                             </div>
-                                            <div class="card-article__reveal-content"><span>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
+                                            <div class="card-article__reveal-content">
+                                                <figcaption>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
                                                     Торт в красивой прозрачной упаковке станет прекрасным подарком как для педагога, так и для вашего школьника.
-                                                </span></div>
+                                                </figcaption>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                                 <div class="news-swiper__slide">
-                                    <div class="card-article">
+                                    <figure class="card-article">
                                         <div class="card-article__overlay waves-effect waves-light"><img class="card-article__image cart-article__image" src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%"></div>
                                         <div class="card-article__wrapper">
                                             <div class="card-article__wrapper-top">
@@ -375,11 +359,13 @@
                                             <div class="card-article__wrapper-top">
                                                 <h4 class="card-article__title">Заказ пирогов и тортов через </h4><i class="material-icons md-close"></i>
                                             </div>
-                                            <div class="card-article__reveal-content"><span>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
+                                            <div class="card-article__reveal-content">
+                                                <figcaption>Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами.
                                                     Торт в красивой прозрачной упаковке станет прекрасным подарком как для педагога, так и для вашего школьника.
-                                                </span></div>
+                                                </figcaption>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +377,7 @@
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__top-wrapper">
-                <div class="footer__head"><a class="logo footer__logo" href="#"><img src="/images/logo.png" width="100%"></a><a class="footer__phone-number" href="tel:211521">21-15-21</a><a class="footer__email" href="mailTo:vpekar32@gmail.com">vpekar32@gmail.com</a></div>
+                <div class="footer__head"><a class="logo footer__logo" href="/index.html"><img src="/images/logo.png" width="100%"></a><a class="footer__phone-number" href="tel:211521">21-15-21</a><a class="footer__email" href="mailTo:vpekar32@gmail.com">vpekar32@gmail.com</a></div>
                 <nav class="footer__nav">
                     <ul class="footer-menu footer-menu_level-0">
                         <li class="footer-menu__item footer-menu__item_level-0"><a class="footer-menu__link footer-menu__link_level-0" href="#">Каталог товаров</a>
@@ -439,9 +425,9 @@
             </div>
         </div>
     </footer><noscript>У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.</noscript>
-    <script src="/js/polyfills.js?Wed Nov 06 2019 19:23:32 GMT+0300 (GMT+03:00)"></script>
-    <script src="/js/main.js?Wed Nov 06 2019 19:23:32 GMT+0300 (GMT+03:00)"> </script>
-    <script src="./js/home.jsWed Nov 06 2019 19:23:32 GMT+0300 (GMT+03:00)"></script>
+    <script src="/js/polyfills.js?Mon Nov 11 2019 19:37:37 GMT+0300 (GMT+03:00)"></script>
+    <script src="/js/main.js?Mon Nov 11 2019 19:37:37 GMT+0300 (GMT+03:00)"> </script>
+    <script src="./js/home.js?Mon Nov 11 2019 19:37:37 GMT+0300 (GMT+03:00)"></script>
 </body>
 
 </html>

@@ -24,6 +24,14 @@ export default class Counter {
             thousandsSeparator: " "
         });
 
+        document.body.addEventListener("click", event => {
+            if (event.target !== this.counterInput) {
+                this.counterOptions.classList.remove(
+                    `${this.counterOptionsClass}_active`
+                );
+            }
+        });
+
         this.counterInput.value = "1";
 
         this.counter.addEventListener("click", this.addOpenOptionEventHandler);
@@ -67,11 +75,11 @@ export default class Counter {
         event.stopPropagation();
 
         let regExp = /[^\d]/g;
-        this.counterInput.value = item.querySelector("span").innerText.replace(regExp, '');
+        this.counterInput.value = item
+            .querySelector("span")
+            .innerText.replace(regExp, "");
         this.counterOptions.classList.remove(
             `${this.counterOptionsClass}_active`
         );
     }
 }
-
-let counter = new Counter(".counter");
