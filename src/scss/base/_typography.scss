@@ -4,9 +4,45 @@
     text-align: center;
     text-transform: uppercase;
 
-    font: 600 28px global.$font-default;
+    font: 600 32px global.$font-default;
 
-    &_h1, &_h2 {
+    &_h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 25% 50px;
+
+        font-size: 32px;
+
+        &:before, &:after {
+            content: '';
+
+            display: flex;
+            flex-grow: 1;
+
+
+            height: 3px;
+            
+            background-color: global.$color-gray_lt;
+        }
+
+        &:before {
+            margin-right: 20px;
+        }
+
+        &:after {
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 636px) {
+            margin: 0 0 20px;
+
+            font-size: 20px;
+        }
+    }
+
+    &_h2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,6 +74,20 @@
 
             font-size: 20px;
         }
+    }
+
+    &_no-line {
+        margin-bottom: 25px;
+        padding-left: 30px;
+
+        &:after, &:before {
+            display: none;
+        }
+    }
+
+    &_no-margin {
+        margin: 0;
+        padding: 0
     }
 }
 

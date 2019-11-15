@@ -4,15 +4,15 @@ header.header
 
         a(href="/index.html").header__logo
 
-            img(src="/images/logo.png" width="100%")
+            img(src="/images/logo.png" width="100%").header__logo-image
 
         .header-toolbar
 
             form.header-search
 
-                input(type="text" placeholder="Искать")#t.header-search__input
+                input(type="text" placeholder="Искать")#search-input.header-search__input
 
-                label.header-search__label(for="t")
+                label.header-search__label(for="search-input")
 
                     i.material-icons-round.header-search__search-icon.md-search
 
@@ -22,33 +22,46 @@ header.header
 
                 .header-toolbar__top
 
-                    a(href="tel:88182211521").header-toolbar__phone-number 21-15-21
+                    a(href="tel:88182211521").header-toolbar__phone-number 8 (8182) 21-15-21
 
                     .header-toolbar__log-in Войти
 
                 .header-toolbar__wrapper
 
-                    .header-toolbar__search
+                    .header-toolbar__burger
 
-                        i.material-icons-round.md-search
+                        .header-toolbar__burger-wrap
 
-                    .header-toolbar__person
+                            .header-toolbar__burger-wrapper
 
-                        i.material-icons-outlined.header-toolbar__person-icon.md-person_outline
+                                .header-toolbar__burger-line
 
-                        .header-toolbar__person-text Войти
+                    .header-toolbar__link.header-toolbar__link_search
 
-                    .header-toolbar__favorite
+                        input.header-toolbar__search-input
 
-                        i.material-icons-outlined.md-favorite_border.header-toolbar__favorite-icon
+                        i.material-icons-round.md-search.header-toolbar__link-icon
 
-                        .header-toolbar__favorite-text Избранное
+                    .header-toolbar__link.header-toolbar__link_person
 
-                    .header-toolbar__cart
+                        i.material-icons-outlined.md-person_outline.header-toolbar__link-icon
 
-                        i.material-icons-outlined.md-shopping_cart.header-toolbar__cart-icon
+                        .header-toolbar__link-text Войти
 
-                        .header-toolbar__cart-text Корзина
+                    a(href="/favorite.html").header-toolbar__link.header-toolbar__link_favorite
+
+                        i.material-icons-outlined.md-favorite_border.header-toolbar__link-icon
+
+                            span.header-toolbar__link-count 12
+
+                        .header-toolbar__link-text Избранное
+
+                    a(href="/cart.html").header-toolbar__link.header-toolbar__link_cart
+
+                        i.material-icons-outlined.md-shopping_cart.header-toolbar__link-icon
+                            .header-toolbar__link-count 3
+
+                        .header-toolbar__link-text Корзина
 
     nav.header-nav
 
@@ -125,4 +138,78 @@ header.header
             li.menu__item.menu__item_level-0
 
                 a(href="#").menu__link.menu__link_level-0 Детские мастер классы
+
+        ul.mobile-menu.mobile-menu_level-0
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="/catalog.html").mobile-menu__link.mobile-menu__link_level-0 Каталог
+
+                ul.mobile-menu.mobile-menu_level-1
+
+                    li.mobile-menu__item.mobile-menu__item_level-1
+
+                        a(href="#").mobile-menu__link.mobile-menu__link_level-1 Кондитерские изделия
+
+                        ul.mobile-menu.mobile-menu_level-2
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Десерты
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Конфеты
+
+                    li.mobile-menu__item.mobile-menu__item_level-1
+
+                        a(href="#").mobile-menu__link.mobile-menu__link_level-1 Пекарня
+
+                        ul.mobile-menu.mobile-menu_level-2
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Выпечка
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Пироги
+
+                    li.mobile-menu__item.mobile-menu__item_level-1
+
+                        a(href="#").mobile-menu__link.mobile-menu__link_level-1 Кухня
+
+                        ul.mobile-menu.mobile-menu_level-2
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Блюда по меню
+
+                            li.mobile-menu__item.mobile-menu__item_level-2
+
+                                a(href="#").mobile-menu__link.mobile-menu__link_level-2 Кулинария
+
+                    li.mobile-menu__item.mobile-menu__item_level-1
+
+                        a(href="#").mobile-menu__link.mobile-menu__link_level-1 Упаковка / декор
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="#").mobile-menu__link.mobile-menu__link_level-0 О компании
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="#").mobile-menu__link.mobile-menu__link_level-0 Оплата
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="#").mobile-menu__link.mobile-menu__link_level-0 Акции
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="#").mobile-menu__link.mobile-menu__link_level-0 Контакты
+
+            li.mobile-menu__item.mobile-menu__item_level-0
+
+                a(href="#").mobile-menu__link.mobile-menu__link_level-0 Детские мастер классы
 

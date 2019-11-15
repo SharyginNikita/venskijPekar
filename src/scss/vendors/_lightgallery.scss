@@ -20,3 +20,93 @@
 //     "../../node_modules/lightgallery.js/src/sass/lg-animations.scss";
 
 @import "../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min";
+
+.fancybox-bg {
+  background: #fff;
+}
+.fancybox-is-open .fancybox-bg {
+  opacity: 1;
+}
+.fancybox-caption {
+  background: none;
+}
+.fancybox-caption__body {
+  font-weight: bold;
+  font-size: 20px;
+  background: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 3px 30px 7px;
+}
+.fancybox-button {
+  background: #fff;
+}
+.fancybox-thumbs {
+  background: #fff;
+}
+.fancybox-infobar span,
+.fancybox-infobar {
+  color: #121212;
+  mix-blend-mode: darken;
+  font-weight: 500;
+}
+.fancybox-button {
+    color: #333 !important;
+}
+.fancybox-button--arrow_left svg {
+  display: none;
+}
+.fancybox-button--arrow_right svg {
+  display: none;
+}
+.fancybox-button--arrow_left div {
+  position: relative;
+}
+.fancybox-button--arrow_right div {
+  position: relative;
+}
+.fancybox-navigation .fancybox-button.fancybox-button--arrow_left,
+.fancybox-navigation .fancybox-button.fancybox-button--arrow_right {
+  opacity: 0.5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.fancybox-navigation .fancybox-button.fancybox-button--arrow_left:hover,
+.fancybox-navigation .fancybox-button.fancybox-button--arrow_right:hover {
+  opacity: 1;
+}
+.fancybox-button--arrow_left:before,
+.fancybox-button--arrow_right:before,
+.fancybox-button--arrow_left:after,
+.fancybox-button--arrow_right:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 3px;
+  background: #121212;
+}
+.fancybox-button--arrow_left:before {
+  top: calc(50% - 6px);
+  transform: translateY(-50%) rotate(135deg);
+  right: 50%;
+}
+.fancybox-button--arrow_left:after {
+  top: calc(50% + 6px);
+  transform: translateY(-50%) rotate(-135deg);
+  right: 50%;
+}
+.fancybox-button--arrow_right:before {
+  top: calc(50% - 6px);
+  transform: translateY(-50%) rotate(45deg);
+  left: 50%;
+}
+.fancybox-button--arrow_right:after {
+  top: calc(50% + 6px);
+  transform: translateY(-50%) rotate(-45deg);
+  left: 50%;
+}
+.fancybox-caption__body {
+    color: #333;
+}

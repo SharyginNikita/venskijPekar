@@ -35,6 +35,4 @@ let productGallery = new Swiper(".product-page-gallery__slides", {
 //     mode: "lg-slide-circular"
 // });
 
-import Counter from './counter';
 
-const counter = new Counter('.counter')

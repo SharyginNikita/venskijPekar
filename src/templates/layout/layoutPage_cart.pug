@@ -1,0 +1,18 @@
+extends layout.pug
+
+block layoutPage
+
+    include header.pug
+
+    main.main
+
+        .main__wrapper.main__wrapper_cart
+
+            .page
+
+                a(href="#").main__back
+                    i.material-icons-round.md-arrow_back_ios.main__back-icon
+
+                block content
+
+    include footer.pug

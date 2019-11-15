@@ -104,7 +104,7 @@ function buildFonts() {
 exports.buildFonts = buildFonts;
 
 function buildIcons() {
-    return src(['./node_modules/font-awesome/fonts/*', './submodules/material-icons-font/font/MaterialIcons.*', './submodules/material-icons-font/font/MaterialIcons-Outlined.*', './submodules/material-icons-font/font/MaterialIcons-Round.*', './node_modules/lightgallery.js/src/fonts/*'])
+    return src(['./node_modules/font-awesome/fonts/*', './submodules/material-icons-font/font/MaterialIcons.*', './submodules/material-icons-font/font/MaterialIcons-Outlined.*', './submodules/material-icons-font/font/MaterialIcons-Round.*', './submodules/material-icons-font/font/MaterialIcons-TwoTone.*',])
         .pipe(dest(`${dir.public}assets/webfonts/`));
 };
 exports.buildIcons = buildIcons;

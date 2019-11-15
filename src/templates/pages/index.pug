@@ -1,4 +1,4 @@
-extends ../layout/layoutPage_main.pug
+extends ../layout/layoutPage_c-noP.pug
 
 block content
 
@@ -21,27 +21,43 @@ block content
        
         .home__wrapper
 
-            section.section.home-stoks
+            section.section.home-main
 
-                h2.title.title_h2 Акции
+                h1.title.title_h1 Венский пекарь
 
                 .description.description_center.
-                    Сделайте середину недели сытнее, слаще и вкуснее с пирогами от венского пекаря!
-                    Во вторник мы предлагаем вам скинку 20% на все пироги с мясом.
-                    По средам - минус 20% на все сладкие пироги. Рыбный четверг выгоднее
-                    на 20% с венским пекарем и пирогами с рыбой. 
+                    Современная пекарня, где с раннего утра, каждый день,
+                    без праздников и выходных, пекутся пироги и делаются
+                    красивые и вкусные торты. Весь ассортимент делается вручную
+                    по уникальным рецептам.
+
+            section.section.home-stoks
 
                 .home-stoks__wrapper
 
-                    - for(let x = 0; x < 3; x++)
+                    a(href="#").home-stoks__card
 
-                        a(href="#").home-stoks__card
+                        .home-stoks__card-overlay
 
-                            .home-stoks__card-overlay
+                            img.home-stoks__card-image(src="/images/stock.png")
 
-                                img.home-stoks__card-image(src="/images/stock.png")
+                        .home-stoks__card-title Мясной вторник
 
-                            .home-stoks__card-title Мясная среда
+                    a(href="#").home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="/images/stock1.jpg")
+
+                        .home-stoks__card-title Сладкая среда
+
+                    a(href="#").home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="/images/stock2.jpg")
+
+                        .home-stoks__card-title Рыбный четверг
 
             section.section.product
 
@@ -63,11 +79,15 @@ block content
 
                         .product-swiper__wrapper
 
-                            - for (let x = 0; x < 9; x++)
+                            - for (let x = 0; x < 3; x++)
 
                                 .product-swiper__slide
 
                                     figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
                                         
                                         a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
                                             img.card-product__image(src="/images/product.png" width="100%")
@@ -80,9 +100,86 @@ block content
 
                                                 .card-product__tags
 
-                                                    .card-product__tag Новинка
+                                                    .card-product__tag.card-product__tag_new Новинка
 
-                                                    .card-product__tag.card-product__tag_blue Новинка
+                                                    .card-product__tag.card-product__tag_hit Хит продаж
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag.card-product__tag_new Новинка
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag.card-product__tag_hit Хит продаж
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
 
                                             .card-product__footer
 
@@ -118,7 +215,7 @@ block content
 
                                         .card-article__overlay.waves-effect.waves-light
 
-                                            img.card-article__image(src="https://венский-пекарь.рф/upload/resize_cache/iblock/e92/283_220_2/e9269b3eb3d2174b34863ee0dd2b45c5.jpg" width="100%").cart-article__image
+                                            img.card-article__image(src="/images/news.jpg" width="100%").cart-article__image
 
                                         .card-article__wrapper
 

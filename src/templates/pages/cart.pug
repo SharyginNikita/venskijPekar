@@ -1,137 +1,152 @@
-extends ../layout/layoutPage.pug
+extends ../layout/layoutPage_cart.pug
 
 block content
 
     article.cart
 
-        .product-page__wrapper
+        .cart__toolbar
 
-            .product-page-gallery
+            h1.title.title_h1.title_no-line.title_no-margin Корзина
 
-                .product-page-gallery__container.product-page-gallery__slides
+        .cart__wrapper
 
-                    .product-page-gallery__wrapper#product-page-gallery__lightgallery(data-fancybox="gallery")
+            .cart-grid
 
-                        - for(let x = 0; x <= 2; x++)
+                .cart-grid__head
 
-                            a.product-page-gallery__slide.waves-effect.waves-light(href="/images/product.png" data-fancybox="images")
-                                img.product-page-gallery__image(src="/images/product.png")
+                    .cart-grid__item-elem.cart-grid__head-title Фото:
+
+                    .cart-grid__item-elem.cart-grid__head-title Товар:
+
+                    .cart-grid__item-elem.cart-grid__head-title Цена:
+
+                    .cart-grid__item-elem.cart-grid__head-title Количество:
+
+                    .cart-grid__item-elem.cart-grid__head-title Сумма:
+
+                    .cart-grid__item-elem.cart-grid__head-title Действия:
+
+                - for (let x = 0; x < 3; x++)
+
+                    .cart-grid__item
+
+                        a(href="/images/product.png").cart-grid__item-elem.cart-grid__item-image
+                            img.product-page-item__thumb(src="/images/product.png")
+
+                        .cart-grid__item-elem.cart-grid__item-props
+
+                            .cart-grid__item-title «Черничное наслаждение» 880 гр
+
+                        .cart-grid__item-elem.cart-grid__item-price
+
+                            .cart-grid__price-current
                             
-                    .product-page-gallery__prev
+                                span.cart-grid__price-cost 999
+                                
+                                span.cart-grid__price-value ₽
 
-                    .product-page-gallery__next
-            
-            .product-page-item
+                        .cart-grid__item-elem.cart-grid__item-count 
+                            
+                            .counter.counter_w-100
 
-                h1.product-page-item__title "Малиновая Рапсодия" 100 гр
+                                input.counter__input(type="text" readonly="true")
 
-                .product-page-item__wrapper
-
-                    .product-page-item__wrap
-
-                        .product-page-item__price 
-
-                            .product-page-item__price-value 95
-
-                            .product-page-item__price-currency ₽
-
-                        .counter
-
-                            input.counter__input(type="text" readonly="true")
-
-                            ul.counter__options
-
-                                - for (x = 1; x < 10; x++)
+                                ul.counter__options
 
                                     li.counter__options-item 
-                                    
-                                        span.counter__options-number #{x}
+                                        
+                                            span.counter__options-number 1
 
-                                li.counter__options-item.counter__options-item_arbitary
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 2
 
-                                    span.counter__options-number 10+
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 3
 
-                            i.material-icons-round.md-keyboard_arrow_down.counter__arrow
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 4
 
-                    ul.product-page-props.product-page-item__wrap
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 5
 
-                        li.product-page-props__prop
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 6
 
-                            .product-page-props__prop-title Производитель:
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 7
 
-                            .product-page-props__prop-value Венский Пекарь
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 8
 
-                        li.product-page-props__prop
+                                    li.counter__options-item 
+                                        
+                                            span.counter__options-number 9
 
-                            .product-page-props__prop-title Артикул:
+                                    li.counter__options-item.counter__options-item_arbitary
 
-                            .product-page-props__prop-value 123456789
+                                        span.counter__options-number 10+
 
-                        li.product-page-props__prop
+                                i.material-icons-round.md-keyboard_arrow_down.counter__arrow
 
-                            .product-page-props__prop-title Вес:
+                        .cart-grid__item-elem.cart-grid__item-sum
 
-                            .product-page-props__prop-value 95 грамм
+                            .cart-grid__price-current 
+                            
+                                span.cart-grid__price-cost 999
+                                
+                                span.cart-grid__price-value ₽
 
-                    .product-page-item__wrap.product-page-item__buttons
+                        .cart-grid__item-elem.cart-grid__item-actions
 
-                        button.product-page-item__btn-cart.waves-effect.waves-light Добавить в корзину
+                            i.material-icons-round.md-close
 
-                            i.material-icons-round.md-add_shopping_cart.product-page-item__icon
+        .cart-bottom 
 
-                        button.product-page-item__btn-one-click.waves-effect.waves-dark Купить в один клик   
+            .cart-bottom__promo
 
-                            i.material-icons-outlined.md-touch_app.product-page-item__icon    
+                .cart-bottom__promo-title У вас есть промокод?
 
-        section.section.product
+                .cart-bottom__promo-code
 
-            h2.title.title_h2 Другие товары
+                    input(type="select").cart-bottom__promo-input
 
-            .product-swiper
+                    button.cart-bottom__promo-submit Применить
 
-                .product-swiper__prev.waves-effect.waves-light
-        
-                    i.material-icons-round.md-arrow_back_ios
-                
-                .product-swiper__next.waves-effect.waves-light
+                .cart-bottom__promo-status Активирован промокод - 10% на все товары
 
-                    i.material-icons-round.md-arrow_forward_ios
+            .cart-bottom__total
 
-                .product-swiper__pagination
+                .cart-bottom__total-wrapper
 
-                .product-swiper__overlay
+                    .cart-bottom__total-row
 
-                    .product-swiper__wrapper
+                        .cart-bottom__total-title Итого товаров на сумму: 
 
-                        - for (let x = 0; x < 9; x++)
+                        .cart-bottom__total-value 999
+                            span &nbsp; ₽
 
-                            .product-swiper__slide
+                    .cart-bottom__total-row
 
-                                figure.card-product
-                                    
-                                    a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
-                                        img.card-product__image(src="/images/product.png" width="100%")
+                        .cart-bottom__total-title Доставка:   
 
-                                    .card-product__content
+                        .cart-bottom__total-value Бесплатно
 
-                                        .card-product__wrapper
+                .cart-bottom__total-sum
 
-                                            a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+                    span.cart-bottom__total-title.cart-bottom__total-title_strong Итого:
 
-                                            .card-product__tags
+                    span.cart-bottom__total-value.cart-bottom__total-value_strong 999
 
-                                                .card-product__tag Новинка
+                    span.cart-bottom__total-currency ₽
 
-                                                .card-product__tag.card-product__tag_blue Новинка
+                button.btn.btn_submit.waves-effect.waves-light Оформить
 
-                                        .card-product__footer
-
-                                            .card-product__price 990₽
-
-                                            button.card-product__btn-cart.waves-effect.waves-light В корзину
-
-block append scripts
-    
-    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
-    script(src="./js/product-page.js?" + date)
-
+//- block append page-bottom
+//- script(src='./js/another-js.js')

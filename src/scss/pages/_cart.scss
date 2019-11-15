@@ -1,0 +1,534 @@
+@use '../utils/_vars.scss' as global;
+
+.cart {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: global.$shadow;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 20px 20px 60px 20px;
+        background-color: #fff;
+
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 926px) {
+            box-shadow: none;
+            border-radius: 0;
+            background-color: #fafafa;
+        }
+    }
+
+    &__toolbar {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 26px;
+
+        @media screen and (max-width: 816px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__id {
+        margin-left: 10px;
+
+        font: 700 26px / 1 global.$font-default;
+        letter-spacing: 0.65px;
+        color: global.$color-text;
+
+        @media screen and (max-width: 816px) {
+            margin: 0;
+        }
+    }
+
+    &__one-click {
+        margin-left: 27px;
+
+        text-decoration: underline;
+        font: 16px global.$font-default;
+        color: #0ab9f3;
+
+        @media screen and (max-width: 816px) {
+            margin: 0;
+        }
+    }
+
+    &__close {
+        @media screen and (max-width: 996px) {
+            top: 0;
+            right: 20px;
+            padding: 20px 10px;
+        }
+
+        .hamburger-inner,
+        .hamburger-inner:before,
+        .hamburger-inner:after {
+            background-color: global.$color-text !important;
+            color: #232;
+        }
+    }
+
+    &__btn-submit {
+        @media screen and (max-width: 706px) {
+            width: auto;
+            align-self: center;
+        }
+    }
+}
+
+.cart-grid {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 44px;
+
+        @media screen and (max-width: 996px) {
+            display: none;
+        }
+    }
+
+    &__head-title {
+        font: 300 16px global.$font-default;
+        color: #282828;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 996px) {
+            position: relative;
+
+            flex-direction: column;
+            align-items: center;
+
+            box-shadow: global.$shadow;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            padding: 14px;
+            background-color: #fff;
+        }
+    }
+
+    &__item-elem {
+        display: flex;
+        //overflow: hidden;
+
+        &:nth-child(6n + 1) {
+            max-width: 155px;
+            width: 100%;
+        }
+
+        &:nth-child(6n + 2) {
+            max-width: 260px;
+            width: 100%;
+        }
+
+        &:nth-child(6n + 3) {
+            max-width: 99px;
+            width: 100%;
+        }
+
+        &:nth-child(6n + 4) {
+            max-width: 95px;
+            width: 100%;
+        }
+
+        &:nth-child(6n + 5) {
+            max-width: 99px;
+            width: 100%;
+        }
+
+        &:nth-child(6n + 6) {
+            max-width: 70px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 996px) {
+            align-items: center;
+
+            margin-bottom: 15px;
+
+            max-width: none !important;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item-image {
+        display: flex;
+        height: 92px;
+
+        background: url("/images/item.png") no-repeat center / contain;
+
+        @media screen and (max-width: 996px) {
+            height: auto;
+
+            box-sizing: border-box;
+            padding: 0 35px;
+        }
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    &__item-props {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item-title {
+        display: flex;
+        align-items: center;
+
+        font: 18px global.$font-default;
+        color: global.$color-text;
+
+        @media screen and (max-width: 996px) {
+            text-align: center;
+        }
+    }
+
+    &__item-sum {
+        display: flex;
+        align-items: center;
+        .cart-grid__price-current {
+            &:before {
+                content: "Сумма";
+            }
+        }
+
+        @media screen and (max-width: 996px) {
+          justify-content: center;
+      }
+    }
+
+    &__item-size {
+        display: flex;
+        align-items: center;
+
+        max-width: 260px !important;
+        width: 100%;
+
+        &-title {
+            margin-right: 8px;
+
+            font: 16px global.$font-default;
+            color: #616161;
+        }
+
+        &-select {
+            flex-grow: 1;
+
+            appearance: none;
+            cursor: pointer;
+
+            box-sizing: border-box;
+            border: solid 1px #cdcdcd;
+            border-radius: 17px;
+            padding: 10px 20px;
+            background: #fff url(/images/icons/arrow-down.svg) no-repeat 95%
+                center/6%;
+
+            text-overflow: ellipsis;
+            color: #424242;
+        }
+    }
+
+    &__item-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .cart-grid__price-current {
+            &:before {
+                content: "Цена";
+            }
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 5px;
+
+        font: 14px / 1 global.$font-default;
+
+        @media screen and (max-width: 996px) {
+            text-align: center;
+        }
+
+        &_old {
+            color: #ff1c5c;
+        }
+
+        &_saving {
+            color: #0b4b82;
+
+            margin-bottom: 16px;
+
+            .product-page__price-wrapper {
+                position: relative;
+
+                &:after {
+                    content: "";
+
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+
+                    width: 100%;
+                    height: 1px;
+
+                    background-color: #0b4b82;
+                }
+            }
+        }
+
+        &-title {
+            margin-right: 10px;
+        }
+
+        &-cost {
+            margin-right: 4px;
+        }
+    }
+
+    &__price-current {
+        display: flex;
+        align-items: center;
+
+        color: global.$color-text;
+
+        &:before {
+            display: none;
+        }
+
+        @media screen and (max-width: 996px) {
+            justify-content: center;
+
+            text-align: center;
+
+            &:before {
+                content: "";
+                display: block;
+
+                margin-right: 10px;
+            }
+        }
+
+        .cart-grid__price-cost {
+            margin-right: 16px;
+
+            font: 700 23px global.$font-default;
+        }
+
+        .card-grid__price-value {
+            font: 23px global.$font-default;
+        }
+    }
+
+    &__item-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 926px) {
+          .counter {
+            width: auto;
+          }
+        }
+    }
+
+    &__item-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media screen and (max-width: 926px) {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          align-self: flex-end;
+          
+          width: auto !important;
+
+          padding: 10px;
+        }
+    }
+
+    &__btn {
+        margin-right: 23px;
+        border: 0;
+        padding: 0;
+        background: no-repeat center / contain;
+
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_favorite {
+            width: 22px;
+            height: 20px;
+
+            background-image: url("/images/icons/heart.png");
+        }
+
+        &_compare {
+            width: 21px;
+            height: 18px;
+
+            background-image: url("/images/icons/bars.png");
+        }
+    }
+}
+
+.cart-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 706px) {
+        flex-direction: column;
+    }
+
+    &__promo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__promo-title {
+        margin-bottom: 11px;
+
+        font: 16px global.$font-default;
+        color: #616161;
+    }
+
+    &__promo-code {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 32px;
+
+        @media screen and (max-width: 416px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__promo-input {
+        height: 34px;
+
+        box-sizing: border-box;
+        margin-right: 15px;
+        border: 1px solid #cdcdcd;
+        border-radius: 17px;
+        padding: 8px 20px;
+
+        font: 700 16px / 0.9 global.$font-default;
+        color: #616161;
+
+        @media screen and (max-width: 416px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__promo-submit {
+        height: 34px;
+
+        box-sizing: border-box;
+        border: solid 1px global.$color-acent;
+        border-radius: 17px;
+        padding: 0px 20px;
+        background-color: transparent;
+
+        font: 16px / 0.9 global.$font-default;
+        color: global.$color-acent;
+    }
+
+    &__promo-status {
+        font: 16px global.$font-default;
+        color: #ff1c5c;
+    }
+
+    &__total {
+        display: flex;
+        flex-direction: column;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 20px;
+        }
+
+        &-row {
+            display: flex;
+
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-sum {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 26px;
+        }
+
+        &-title {
+            margin-right: 5px;
+
+            font: 700 16px global.$font-default;
+
+            &_strong {
+                font: 32px global.$font-default;
+            }
+        }
+
+        &-value {
+            font: 700 16px global.$font-default;
+
+            &_strong {
+                margin-right: 10px;
+
+                font-size: 36px;
+            }
+        }
+
+        &-currency {
+            font: 26px global.$font-default;
+        }
+    }
+}

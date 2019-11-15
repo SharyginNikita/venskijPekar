@@ -6,12 +6,10 @@ block layoutPage
 
     main.main
 
-        .main__wrapper
+        .page.page_product-page
 
-            .page
-
-                a(href="#").main__back
-                    i.material-icons-round.md-arrow_back_ios.main__back-icon
+            a(href="#").main__back.main__back_product-page
+                i.material-icons-round.md-arrow_back_ios.main__back-icon
 
             .path
 
@@ -29,6 +27,6 @@ block layoutPage
 
                         a(href="press-center.html").path__link Подраздел
 
-                block content
+            block content
 
     include footer.pug
