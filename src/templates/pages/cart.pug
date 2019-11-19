@@ -40,13 +40,13 @@ block content
                         .cart-grid__item-elem.cart-grid__item-price
 
                             .cart-grid__price-current
-                            
+
                                 span.cart-grid__price-cost 999
-                                
+
                                 span.cart-grid__price-value ₽
 
                         .cart-grid__item-elem.cart-grid__item-count 
-                            
+
                             .counter.counter_w-100
 
                                 input.counter__input(type="text" readonly="true")
@@ -54,40 +54,40 @@ block content
                                 ul.counter__options
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 1
+
+                                        span.counter__options-number 1
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 2
+
+                                        span.counter__options-number 2
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 3
+
+                                        span.counter__options-number 3
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 4
+
+                                        span.counter__options-number 4
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 5
+
+                                        span.counter__options-number 5
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 6
+
+                                        span.counter__options-number 6
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 7
+
+                                        span.counter__options-number 7
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 8
+
+                                        span.counter__options-number 8
 
                                     li.counter__options-item 
-                                        
-                                            span.counter__options-number 9
+
+                                        span.counter__options-number 9
 
                                     li.counter__options-item.counter__options-item_arbitary
 
@@ -98,9 +98,9 @@ block content
                         .cart-grid__item-elem.cart-grid__item-sum
 
                             .cart-grid__price-current 
-                            
+
                                 span.cart-grid__price-cost 999
-                                
+
                                 span.cart-grid__price-value ₽
 
                         .cart-grid__item-elem.cart-grid__item-actions
@@ -120,6 +120,28 @@ block content
                     button.cart-bottom__promo-submit Применить
 
                 .cart-bottom__promo-status Активирован промокод - 10% на все товары
+
+            .cart-bottom__order
+
+                .material-input.material-input_required(id="material-input-name")
+                    input(id="name" type="text" required name="name")
+                    label(for="name") Ваше имя
+
+                .material-input.material-input_required(id="material-input-email")
+                    input(id="email" type="text" required name="email")
+                    label(for="email") E-mail
+
+                .material-input.material-input_required(id="material-input-phone")
+                    input(id="phone" type="text" required name="phone")
+                    label(for="phone") Телефон
+
+                .material-input(id="material-input-delivery")
+                    input(id="delivery" type="text" name="delivery" readonly)
+                    label(for="delivery") Дата доставки
+
+                .material-textarea(id="material-textarea")
+                    textarea(id="message" rows="1" name="question")
+                    label(for="message") Комментарии к заказу
 
             .cart-bottom__total
 
@@ -146,7 +168,7 @@ block content
 
                     span.cart-bottom__total-currency ₽
 
-                button.btn.btn_submit.waves-effect.waves-light Оформить
+                a(href="/order.html").btn.btn_submit.cart__btn-submit.waves-effect.waves-light Оформить
 
-//- block append page-bottom
-//- script(src='./js/another-js.js')
+block append scripts
+    script(src='./js/cart.js?' + date)

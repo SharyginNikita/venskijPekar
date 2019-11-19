@@ -1,0 +1,40 @@
+extends ../layout/layoutPage.pug
+
+block content
+
+    article.news
+
+        h1.title.title_h1.title_no-line Новости
+
+        .news__wrapper
+
+            - for(let x = 0; x <= 12; x++)
+
+                figure.card-article
+
+                    a(href="/article.html").card-article__overlay.waves-effect.waves-light
+
+                        img.card-article__image(src="/images/news.jpg" width="100%").cart-article__image
+
+                    .card-article__wrapper
+
+                        .card-article__wrapper-top
+
+                            h4.card-article__title Заказ пирогов и тортов через 
+
+                            i.material-icons.md-more_vert
+
+                        a(href="/article.html").card-article__link Узнать больше
+
+                    .card-article__reveal
+
+                        .card-article__wrapper-top
+
+                            h4.card-article__title Заказ пирогов и тортов через 
+
+                            i.material-icons.md-close
+
+                        .card-article__reveal-content
+                            figcaption.
+                                Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами. 
+                                Торт в красивой прозрачной упаковке  станет прекрасным подарком как для педагога, так и для вашего школьника.

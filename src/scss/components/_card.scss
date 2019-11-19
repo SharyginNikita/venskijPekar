@@ -97,15 +97,15 @@
   &__pagination {
     position: absolute;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
 
     bottom: 5px;
     left: 0;
     right: 0;
 
-    display: flex;
+    overflow: hidden;
 
     width: 100%;
     height: 16px;
@@ -116,23 +116,27 @@
   }
 
   &__bullet {
-    flex-shrink: 0;
+    position: relative;
+
+    display: inline-block;
 
     width: 16px;
     height: 100%;
 
+    box-sizing: border-box;
     border-radius: 50%;
     margin-right: 4px;
     background-color: global.$color-acent;
     opacity: 0.5;
 
     z-index: 3;
-    transition: 0.3s ease opacity, padding;
+    transition: 0.3s ease opacity, 0.3s ease transform;
     cursor: pointer;
 
-    &_active {
-      padding: 2.5px;
+    transform: scale(.65);
 
+    &_active {
+      transform: scale(1);
       opacity: 1;
     }
 

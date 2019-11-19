@@ -1,0 +1,26 @@
+@use '../utils/vars' as global;
+
+.order {
+    &__title {
+        font: 700 24px global.$font-default;
+        text-align: center;
+
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-weight: bold;
+        color: global.$color-text;
+
+        transition: .3s ease color;
+
+        &:hover {
+            color: global.$color-acent;
+        }
+    }
+}

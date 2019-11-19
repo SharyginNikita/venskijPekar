@@ -17,6 +17,7 @@
         background-color: global.$color-red;
     
         text-transform: uppercase;
+        text-align: center;
         font-weight: 700;
         color: #fff;
     
@@ -29,6 +30,37 @@
             box-shadow: global.$shadow_hover;
           }
         }
+    }
+
+    &_auth {
+        justify-content: center;
+
+        width: 100%;
+        
+        box-sizing: border-box;
+        box-shadow: global.$shadow;
+        border: 0;
+        border-radius: 4px;
+        padding: 10px 18px;
+        background-color: global.$color-red;
+    
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+    
+        transition: 0.3s ease box-shadow;
+    
+        cursor: pointer;
+    
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            box-shadow: global.$shadow_hover;
+          }
+        }
+    }
+
+    &_gray {
+        background-color: global.$color-gray;
     }
 }
 

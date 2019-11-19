@@ -9,7 +9,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <!--meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")-->
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/css/main.css?Fri Nov 15 2019 14:31:11 GMT+0300 (GMT+03:00)">
+    <link rel="stylesheet" href="/css/main.css?Tue Nov 19 2019 19:25:30 GMT+0300 (GMT+03:00)">
 </head>
 
 <body class="body">
@@ -19,7 +19,7 @@
                 <form class="header-search"><input class="header-search__input" type="text" placeholder="Искать" id="search-input"><label class="header-search__label" for="search-input"><i class="material-icons-round header-search__search-icon md-search"></i></label></form>
                 <div class="header-toolbar__bottom">
                     <div class="header-toolbar__top"><a class="header-toolbar__phone-number" href="tel:88182211521">8 (8182) 21-15-21</a>
-                        <div class="header-toolbar__log-in">Войти</div>
+                        <div class="header-toolbar__log-in modal-trigger" data-target="modal-logIn">Войти</div>
                     </div>
                     <div class="header-toolbar__wrapper">
                         <div class="header-toolbar__burger">
@@ -29,8 +29,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header-toolbar__link header-toolbar__link_search"><input class="header-toolbar__search-input"><i class="material-icons-round md-search header-toolbar__link-icon"></i></div>
-                        <div class="header-toolbar__link header-toolbar__link_person"><i class="material-icons-outlined md-person_outline header-toolbar__link-icon"></i>
+                        <div class="header-toolbar__link header-toolbar__link_search"><input class="header-toolbar__search-input"><i class="material-icons-round md-search header-toolbar__link-icon"></i><i class="material-icons-round md-close header-toolbar__link-search-reset"></i></div>
+                        <div class="header-toolbar__link header-toolbar__link_person modal-trigger" data-target="modal-logIn"><i class="material-icons-outlined md-person_outline header-toolbar__link-icon"></i>
                             <div class="header-toolbar__link-text">Войти</div>
                         </div><a class="header-toolbar__link header-toolbar__link_favorite" href="/favorite.html"><i class="material-icons-outlined md-favorite_border header-toolbar__link-icon"><span class="header-toolbar__link-count">12</span></i>
                             <div class="header-toolbar__link-text">Избранное</div>
@@ -68,10 +68,10 @@
                         <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Упаковка / декор</a></li>
                     </ul>
                 </li>
-                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">О компании</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/news.html">Новости</a></li>
                 <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Оплата</a></li>
                 <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Акции</a></li>
-                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Контакты</a></li>
+                <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/contacts.html">Контакты</a></li>
                 <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Детские мастер классы</a></li>
             </ul>
             <ul class="mobile-menu mobile-menu_level-0">
@@ -101,14 +101,15 @@
                 <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="#">О компании</a></li>
                 <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="#">Оплата</a></li>
                 <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="#">Акции</a></li>
-                <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="#">Контакты</a></li>
+                <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="/contacts.html">Контакты</a></li>
                 <li class="mobile-menu__item mobile-menu__item_level-0"><a class="mobile-menu__link mobile-menu__link_level-0" href="#">Детские мастер классы</a></li>
             </ul>
+            <div class="mobile-menu-closer"><i class="material-icons-round md-close mobile-menu-closer__icon"></i></div>
         </nav>
     </header>
     <main class="main">
         <div class="main__wrapper main__wrapper_cart">
-            <div class="page"><a class="main__back" href="#"><i class="material-icons-round md-arrow_back_ios main__back-icon"></i></a>
+            <div class="page"><a class="main__back main__back_left" href="#"><i class="material-icons-round md-arrow_back_ios main__back-icon"></i></a>
                 <article class="cart">
                     <div class="cart__toolbar">
                         <h1 class="title title_h1 title_no-line title_no-margin">Корзина</h1>
@@ -215,6 +216,13 @@
                             <div class="cart-bottom__promo-code"><input class="cart-bottom__promo-input" type="select"><button class="cart-bottom__promo-submit">Применить</button></div>
                             <div class="cart-bottom__promo-status">Активирован промокод - 10% на все товары</div>
                         </div>
+                        <div class="cart-bottom__order">
+                            <div class="material-input material-input_required" id="material-input-name"><input id="name" type="text" required name="name"><label for="name">Ваше имя</label></div>
+                            <div class="material-input material-input_required" id="material-input-email"><input id="email" type="text" required name="email"><label for="email">E-mail</label></div>
+                            <div class="material-input material-input_required" id="material-input-phone"><input id="phone" type="text" required name="phone"><label for="phone">Телефон</label></div>
+                            <div class="material-input" id="material-input-delivery"><input id="delivery" type="text" name="delivery" readonly><label for="delivery">Дата доставки</label></div>
+                            <div class="material-textarea" id="material-textarea"><textarea id="message" rows="1" name="question"></textarea><label for="message">Комментарии к заказу</label></div>
+                        </div>
                         <div class="cart-bottom__total">
                             <div class="cart-bottom__total-wrapper">
                                 <div class="cart-bottom__total-row">
@@ -226,7 +234,7 @@
                                     <div class="cart-bottom__total-value">Бесплатно</div>
                                 </div>
                             </div>
-                            <div class="cart-bottom__total-sum"><span class="cart-bottom__total-title cart-bottom__total-title_strong">Итого:</span><span class="cart-bottom__total-value cart-bottom__total-value_strong">999</span><span class="cart-bottom__total-currency">₽</span></div><button class="btn btn_submit waves-effect waves-light">Оформить</button>
+                            <div class="cart-bottom__total-sum"><span class="cart-bottom__total-title cart-bottom__total-title_strong">Итого:</span><span class="cart-bottom__total-value cart-bottom__total-value_strong">999</span><span class="cart-bottom__total-currency">₽</span></div><a class="btn btn_submit cart__btn-submit waves-effect waves-light" href="/order.html">Оформить</a>
                         </div>
                     </div>
                 </article>
@@ -251,9 +259,9 @@
                         <li class="footer-menu__item footer-menu__item_level-0"><a class="footer-menu__link footer-menu__link_level-0" href="#">Компания</a>
                             <ul class="footer-menu footer-menu_level-1">
                                 <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="#">О компании</a></li>
-                                <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="#">Новости</a></li>
+                                <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="/news.html">Новости</a></li>
                                 <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="#">Акции</a></li>
-                                <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="#">Контакты</a></li>
+                                <li class="footer-menu__item footer-menu__item_level-1"><a class="footer-menu__link footer-menu__link_level-1" href="/contacts.html">Контакты</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -284,8 +292,10 @@
             </div>
         </div>
     </footer><noscript>У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.</noscript>
-    <script src="/js/polyfills.js?Fri Nov 15 2019 14:31:11 GMT+0300 (GMT+03:00)"></script>
-    <script src="/js/main.js?Fri Nov 15 2019 14:31:11 GMT+0300 (GMT+03:00)"> </script>
+    <script src="/js/polyfills.js?Tue Nov 19 2019 19:25:30 GMT+0300 (GMT+03:00)"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/main.js?Tue Nov 19 2019 19:25:30 GMT+0300 (GMT+03:00)"> </script>
+    <script src="./js/cart.js?Tue Nov 19 2019 19:25:30 GMT+0300 (GMT+03:00)"></script>
 </body>
 
 </html>

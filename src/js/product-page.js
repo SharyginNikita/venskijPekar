@@ -27,7 +27,15 @@ let productGallery = new Swiper(".product-page-gallery__slides", {
     navigation: {
         prevEl: ".product-page-gallery__prev",
         nextEl: ".product-page-gallery__next"
-    }
+    },
+    pagination: {
+      el: ".product-page-gallery__pagination",
+      dynamicBullets: true,
+      type: "bullets",
+      clickable: true,
+      bulletClass: "product-page-gallery__bullet",
+      bulletActiveClass: "product-page-gallery__bullet_active"
+  },
 });
 
 // const el = document.querySelector("#product-page-gallery__lightgallery");

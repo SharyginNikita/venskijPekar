@@ -1,0 +1,28 @@
+extends ../layout/layoutPage_cart.pug
+
+block content
+
+    article.order
+
+        .order__title Никита, Ваш заказ сформирован!
+
+        .order__description
+            |На адрес <b>myEmail@yandex.ru</b> выслано подтверждение вашего заказа.
+            br
+            |В ближайшее время менеджер свяжется с вами для подтверждения заказа и уточнит детали.
+            br
+            br
+            |Номер вашего заказа <b>№1</b>, дата формирования <b>18.11.2019 16:12:58</b>
+            br
+            br
+            |Вы всегда можете узнать любую информацию, связанную с вашим заказом,
+            br
+            |позвонив по номеру 
+            a(href="tel:+78182211521").order__link +7 (8182) 21-15-21
+            |  или, отправив письмо на адрес 
+            a(href="mailTo:info@shoes-bags.ru").order__link test@test.ru
+
+  
+
+//- block append scripts
+//-     script(src='./js/cart.js')

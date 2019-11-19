@@ -1,0 +1,62 @@
+@use '../utils/vars' as global;
+
+.modal {
+    width: 40vw !important;
+    max-width: none;
+    max-height: none !important;
+
+    border-radius: 10px !important;
+
+    overflow: visible !important;
+
+    @media screen and (max-width: 996px) {
+        width: 60vw !important;
+    }
+
+    @media screen and (max-width: 556px) {
+        width: 90vw !important;
+    }
+
+    &__close {
+        position: absolute;
+        top: -14px;
+        right: -10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+
+        width: 40px !important;
+        height: 40px;
+
+        padding: 6px;
+
+        box-shadow: global.$shadow;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &__inputs {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin: 20px 0;
+
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+
+        font-size: 24px;
+    }
+}
+
+.modal-btn__signUp {
+    width: 100%;
+
+    font-family: global.$font-default;
+    font-size: 14px;
+}

@@ -24,7 +24,7 @@ header.header
 
                     a(href="tel:88182211521").header-toolbar__phone-number 8 (8182) 21-15-21
 
-                    .header-toolbar__log-in Войти
+                    .header-toolbar__log-in(data-target="modal-logIn" class="modal-trigger") Войти
 
                 .header-toolbar__wrapper
 
@@ -42,7 +42,9 @@ header.header
 
                         i.material-icons-round.md-search.header-toolbar__link-icon
 
-                    .header-toolbar__link.header-toolbar__link_person
+                        i.material-icons-round.md-close.header-toolbar__link-search-reset
+
+                    .header-toolbar__link.header-toolbar__link_person(data-target="modal-logIn" class="modal-trigger")
 
                         i.material-icons-outlined.md-person_outline.header-toolbar__link-icon
 
@@ -121,7 +123,7 @@ header.header
 
             li.menu__item.menu__item_level-0
 
-                a(href="#").menu__link.menu__link_level-0 О компании
+                a(href="/news.html").menu__link.menu__link_level-0 Новости
 
             li.menu__item.menu__item_level-0
 
@@ -133,7 +135,7 @@ header.header
 
             li.menu__item.menu__item_level-0
 
-                a(href="#").menu__link.menu__link_level-0 Контакты
+                a(href="/contacts.html").menu__link.menu__link_level-0 Контакты
 
             li.menu__item.menu__item_level-0
 
@@ -207,9 +209,12 @@ header.header
 
             li.mobile-menu__item.mobile-menu__item_level-0
 
-                a(href="#").mobile-menu__link.mobile-menu__link_level-0 Контакты
+                a(href="/contacts.html").mobile-menu__link.mobile-menu__link_level-0 Контакты
 
             li.mobile-menu__item.mobile-menu__item_level-0
 
                 a(href="#").mobile-menu__link.mobile-menu__link_level-0 Детские мастер классы
 
+        .mobile-menu-closer
+
+            i.material-icons-round.md-close.mobile-menu-closer__icon

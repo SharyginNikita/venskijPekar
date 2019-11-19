@@ -1,0 +1,92 @@
+extends ../layout/layoutPage_product-page.pug
+
+block content
+
+    article.article
+
+        .article__wrapper
+
+            .article-gallery
+
+                .article-gallery__container.article-gallery__slides
+
+                    .article-gallery__wrapper#article-gallery__lightgallery
+
+                        - for(let x = 0; x <= 6; x++)
+
+                            .article-gallery__slide
+
+                                a(href="/images/news.jpg" data-fancybox="images" data-caption="«Черничное наслаждение» 880 гр").article-galley__link
+
+                                    img.article-gallery__image(src="/images/news.jpg")
+
+                    .article-gallery__pagination
+                            
+                    .article-gallery__prev
+
+                    .article-gallery__next
+                
+            .article-text
+
+                h1.article__title Заказ пирогов и тортов через сайт
+
+                .article-text__wrapper
+
+                    p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Над коварный которой назад путь имени. Единственное вопрос безорфографичный заглавных реторический текстов? Продолжил всемогущая, своего щеке это подпоясал семантика приставка!
+
+        section.section.news
+
+                h2.title.title_h2 Другие новости
+
+                .news-swiper
+
+                    .news-swiper__prev.waves-effect.waves-light
+            
+                        i.material-icons-round.md-arrow_back_ios
+                    
+                    .news-swiper__next.waves-effect.waves-light
+
+                        i.material-icons-round.md-arrow_forward_ios
+
+                    .news-swiper__pagination
+
+                    .news-swiper__overlay
+
+                        .news-swiper__wrapper
+
+                            - for (let x = 0; x < 4; x++)
+
+                                .news-swiper__slide
+
+                                    figure.card-article
+
+                                        a(href="/article.html").card-article__overlay.waves-effect.waves-light
+
+                                            img.card-article__image(src="/images/news.jpg" width="100%").cart-article__image
+
+                                        .card-article__wrapper
+
+                                            .card-article__wrapper-top
+
+                                                h4.card-article__title Заказ пирогов и тортов через 
+
+                                                i.material-icons.md-more_vert
+
+                                            a(href="/article.html").card-article__link Узнать больше
+
+                                        .card-article__reveal
+
+                                            .card-article__wrapper-top
+
+                                                h4.card-article__title Заказ пирогов и тортов через 
+
+                                                i.material-icons.md-close
+
+                                            .card-article__reveal-content
+                                                figcaption.
+                                                    Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами. 
+                                                    Торт в красивой прозрачной упаковке  станет прекрасным подарком как для педагога, так и для вашего школьника.
+
+block append scripts
+    script(src="./js/article.js?" + date)
+

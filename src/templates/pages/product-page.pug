@@ -12,7 +12,7 @@ block content
 
                     .product-page-gallery__wrapper#product-page-gallery__lightgallery
 
-                        - for(let x = 0; x <= 2; x++)
+                        - for(let x = 0; x <= 6; x++)
 
                             .product-page-gallery__slide
 
@@ -25,6 +25,8 @@ block content
                                 a(href="/images/product.png" data-fancybox="images" data-caption="«Черничное наслаждение» 880 гр").product-page-galley__link
 
                                     img.product-page-gallery__image(src="/images/product.png")
+
+                    .product-page-gallery__pagination
                             
                     .product-page-gallery__prev
 
@@ -222,6 +224,5 @@ block content
 
 block append scripts
     
-    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(src="./js/product-page.js?" + date)
 

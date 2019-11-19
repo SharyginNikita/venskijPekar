@@ -5658,6 +5658,11 @@ js-beautify@^1.10.1:
     mkdirp "~0.5.1"
     nopt "~4.0.1"
 
+js-datepicker@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/js-datepicker/-/js-datepicker-5.2.1.tgz#acdfd2effd9e244c202d96dc6cac6685c797664f"
+  integrity sha512-lkXhST7AXkkZyUrKNFu08O1djQDIqf0NXbFVJawryVBGwV8YK6bFGBcdzZnWThCW16jAvwo1jA+2FTu437WI6Q==
+
 js-levenshtein@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"

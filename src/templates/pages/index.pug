@@ -79,7 +79,7 @@ block content
 
                         .product-swiper__wrapper
 
-                            - for (let x = 0; x < 3; x++)
+                            - for (let x = 0; x < 6; x++)
 
                                 .product-swiper__slide
 
@@ -213,7 +213,7 @@ block content
 
                                     figure.card-article
 
-                                        .card-article__overlay.waves-effect.waves-light
+                                        a(href="/article.html").card-article__overlay.waves-effect.waves-light
 
                                             img.card-article__image(src="/images/news.jpg" width="100%").cart-article__image
 
@@ -225,13 +225,13 @@ block content
 
                                                 i.material-icons.md-more_vert
 
-                                            a(href="#").card-article__link Узнать больше
+                                            a(href="/article.html").card-article__link Узнать больше
 
                                         .card-article__reveal
 
                                             .card-article__wrapper-top
 
-                                                h4.card-article__title Заказ пирогов и тортов через 
+                                                h4.card-article__title Заказ пирогов и тортов через сайт
 
                                                 i.material-icons.md-close
 

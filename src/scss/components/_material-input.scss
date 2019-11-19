@@ -1,0 +1,132 @@
+@use '../utils/vars' as global;
+
+$color-primary: global.$color-black;
+$color-background: transparent;
+$color-error: #da2839;
+
+$border-width: 0 0 1px;
+$border-style: solid;
+$border-color: $color-primary;
+$border-color-active: #7a7a7a;
+
+$color-font: $color-primary;
+$color-font-active: #7a7a7a;
+$font-label: global.$font-default;
+$font-input: global.$font-default;
+
+$font-size-input: 16px;
+$font-size-label: 18px;
+$font-size-label-active: 12px;
+
+$animation: 0.2s ease;
+
+$label-position-top: calc(50% - 8.5px);
+$label-position-top-active: 0;
+$label-position-left: 14px;
+$label-position-left-active: $label-position-left;
+
+.material-input,
+.material-textarea {
+    position: relative;
+    cursor: text;
+    width: 100%;
+
+    margin-bottom: 3px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    input,
+    textarea {
+        transition: border-color $animation;
+        margin: 0;
+        border: 0;
+        border-radius: 0 !important;
+        border-width: $border-width;
+        border-style: $border-style;
+        border-color: $border-color;
+        background: $color-background;
+        padding: 18px 18px 6px 18px;
+        width: 100%;
+        overflow: hidden;
+        color: $color-primary;
+        font-family: $font-input;
+        font-size: $font-size-input;
+        box-sizing: border-box;
+        resize: none;
+
+        &:required {
+            box-shadow: none;
+        }
+
+        &:focus {
+            border-color: $color-error;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: $label-position-top;
+        left: $label-position-left;
+        transition: top $animation, font-size $animation;
+        cursor: text;
+        font-size: $font-size-label;
+        line-height: 163.19%;
+    }
+
+    &:hover {
+        input,
+        textarea {
+            transition: border-color $animation;
+            border-color: $border-color-active;
+        }
+
+        label {
+            transition: color $animation;
+            color: $color-font-active;
+        }
+    }
+
+    &:focus-within {
+        label {
+            top: 0;
+            transition: top $animation, font-size $animation;
+            color: $color-font-active;
+            font-size: 12px;
+        }
+
+        input,
+        textarea {
+            transition: border-color $animation;
+            border-color: $border-color-active;
+        }
+    }
+
+    &_active {
+        color: $color-font-active;
+
+        label {
+            top: $label-position-top-active;
+            transition: top $animation, font-size $animation;
+            color: $color-font-active;
+            font-size: $font-size-label-active;
+        }
+
+        input,
+        textarea {
+            transition: border-color $animation;
+            border-color: $border-color-active;
+        }
+    }
+
+    &_required {
+        &::before {
+            position: absolute;
+            color: $color-error;
+            font-size: 24px;
+            content: "*";
+            top: 7px;
+        }
+    }
+}

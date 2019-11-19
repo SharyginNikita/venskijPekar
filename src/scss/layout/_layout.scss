@@ -54,6 +54,10 @@
     box-sizing: border-box;
     padding: 40px 15px 0px 15px;
 
+    &_contacts {
+      padding: 40px 0px 0px 0px;   
+    }
+
     @media screen and (max-width: 626px) {
       padding-top: 25px;
     }
@@ -81,6 +85,10 @@
     border-radius: 50%;
     background-color: #fff;
       
+    }
+
+    &_left {
+      left: 0;
     }
 
     @media screen and (max-width: 606px) {
