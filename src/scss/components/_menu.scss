@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use '../utils/_vars.scss' as global;
+@use '../utils/_animations' as animate;
 
 .menu {
     display: flex;
@@ -48,8 +49,9 @@
 
         @media screen and (min-width: 900px) {
             &:hover {
-                > .menu {
+                > .menu_level-1 {
                     display: flex;
+                    @include animate.fadeIn(.2s);
                 }
             }
         }
@@ -99,7 +101,7 @@
         }
 
         &_level-1 {
-            padding-bottom: 15px;
+            padding-bottom: 20px;
 
             font-size: 15px;
         }

@@ -236,7 +236,7 @@ class Menu {
                 if (item) {
                     item.classList.toggle(`${this.menu.classList[0]}_active`);
 
-                    event.preventDefault();
+                    //event.preventDefault();
 
                     item.addEventListener("click", event => {
                         event.stopPropagation();

@@ -16,7 +16,7 @@
 
 
 @mixin fadeIn($duration) {
-    animation: fadeEffect $duration;
+    animation: fadeEffectIn $duration;
 }
 
 @mixin fadeOut($duration) {

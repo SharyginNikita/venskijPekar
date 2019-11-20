@@ -4,6 +4,8 @@
     position: sticky;
     top: 0;
 
+    transform: translateZ(0);
+
     z-index: 10;
 
     display: flex;
@@ -18,7 +20,7 @@
     padding: 20px 0 0;
     background-color: #fff;
 
-    transform: translate3d(0, 0, 0);
+    //transform: translate3d(0, 0, 0);
     transition: 0.3s ease;
 
     z-index: 11;

@@ -201,11 +201,15 @@
       transition: 0.3s ease transform;
       cursor: pointer;
   
-      transform: scale(.65);
+      transform: scale(.4);
   
       &_active {
         transform: scale(1);
         opacity: 1;
+      }
+
+      &_active-prev, &_active-next {
+        transform: scale(.7);
       }
   
       &:last-child {
