@@ -76,41 +76,61 @@
 
     &__pagination {
         position: absolute;
-        bottom: 33px;
+    
+        display: block;
+        white-space: nowrap;
+        text-align: center;
+    
+        bottom: 40px;
         left: 0;
         right: 0;
-
-        display: flex;
-
+    
+        overflow: hidden;
+    
         width: 100%;
-        max-width: 50px;
-        height: 8px;
-
+        height: 16px;
+    
         margin: 0 auto;
-    }
-
-    &__bullet {
-        flex-shrink: 0;
-
-        width: 8px;
+    
+        z-index: 2;
+      }
+    
+      &__bullet {
+        position: relative;
+    
+        display: inline-block;
+    
+        width: 16px;
         height: 100%;
-
+    
+        box-sizing: border-box;
+        box-shadow: global.$shadow;
+        border: 3px solid global.$color-acent;
         border-radius: 50%;
         margin-right: 4px;
         background-color: #fff;
-
+    
         z-index: 3;
-        transition: 0.3s ease;
+        //transition: 0.3s ease transform;
         cursor: pointer;
-
+    
+        transform: scale(.4);
+      
         &_active {
-            background-color: rgba(255, 255, 255, 0.5);
+          transition: 0.3s ease transform;
+          transform: scale(1);
+          opacity: 1;
         }
-
+    
+        &_active-prev, &_active-next {
+          transition: 0.3s ease transform;
+          transform: scale(.7);
+        }
+    
         &:last-child {
-            margin: 0;
+          margin: 0;
         }
-    }
+      }
 }
 
 .home-main {

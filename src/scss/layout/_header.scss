@@ -38,7 +38,7 @@
     }
 
     &__top {
-        position: relative;
+        //position: relative;
 
         display: flex;
 
@@ -47,14 +47,16 @@
 
         box-sizing: border-box;
         padding: 0 15px;
-        margin-bottom: 15px;
+        //margin-bottom: 15px;
 
-        transform: translate3d(0, 0, 0);
-        filter: blur(0);
+       
 
         @media screen and (max-width: 900px) {
             box-shadow: global.$shadow;
             padding-bottom: 15px;
+
+            transform: translate3d(0, 0, 0);
+            filter: blur(0);
         }
 
         @media screen and (max-width: 626px) {
@@ -66,8 +68,8 @@
 
         &_blur {
             filter: global.$blur;
-            transition: 1s ease filter;
-            -webkit-transition:  1s ease -webkit-filter;
+            transition: .3s ease filter;
+            -webkit-transition:  .3s ease -webkit-filter;
         }
     }
 
@@ -136,7 +138,7 @@
 
         overflow: hidden;
 
-        padding: 10px 0;
+        padding: 0 0 20px;
 
         @media screen and (max-width: 626px) {
             flex-direction: column;
@@ -445,6 +447,11 @@
             }
         }
     }
+
+    &__search-wrap {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .header-search {
@@ -457,8 +464,13 @@
     
     border: 1px solid #dfe1e5;
     border-radius: 24px;
+    margin: 0 0 20px 30px;
 
     transition: .3s ease box-shadow;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
 
     @media screen and (max-width: 626px) {
         display: none;
@@ -554,8 +566,9 @@
         opacity: 0;
         transform: translateX(-100%);
         //transform: scale(0);
-        transition: 0.3s ease;
-        transition-property: transform, opacity, background-color;
+        transition: 0.3s ease .3s;
+        transition-property: transform, background-color;
+        
     }
 
     &_active {
@@ -564,7 +577,13 @@
             transform: translate(0);
             background-color: rgba(0, 0, 0, .6);
 
+            transition: 0.3s ease;
+            
+
             > .mobile-menu_level-0 {
+
+                transition: 0.3s ease .35s;
+                transition-property: transform, opacity;
                 transform: scale(1);
                 opacity: 1;
             }

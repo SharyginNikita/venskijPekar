@@ -16,9 +16,11 @@ block content
 
             .home-swiper__wrapper
 
-                .home-swiper__slide
-                    img(src="https://www.shoes-bags.ru/upload/iblock/f49/f4942bcf974863d2593343388df3d2ed.jpg" width="100%")
-       
+                - for(let x = 0; x < 5; x++)
+
+                    .home-swiper__slide
+                        img(src="https://www.shoes-bags.ru/upload/iblock/f49/f4942bcf974863d2593343388df3d2ed.jpg" width="100%")
+        
         .home__wrapper
 
             section.section.home-main

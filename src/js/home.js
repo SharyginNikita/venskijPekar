@@ -17,11 +17,12 @@ let swiperMain = new Swiper(".home-swiper", {
   },
   pagination: {
     el: ".home-swiper__pagination",
+    dynamicBullets: true,
     type: "bullets",
     clickable: true,
     bulletClass: "home-swiper__bullet",
     bulletActiveClass: "home-swiper__bullet_active"
-  }
+},
 });
 
 let swiperStoks = new Swiper(".home-stoks", {
