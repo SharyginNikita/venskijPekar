@@ -51,7 +51,7 @@
             &:hover {
                 > .menu_level-1 {
                     display: flex;
-                    @include animate.fadeIn(.2s);
+                    @include animate.fadeIn(0.2s);
                 }
             }
         }
@@ -127,8 +127,8 @@
     margin: 0;
     padding: 0;
 
-    transition: .3s ease;
-    transition-property: transition, max-height;
+    transition: 0.3s ease .35s;
+    transition-property: transform, opacity;
     z-index: 2;
 
     //display: flex;
@@ -140,15 +140,18 @@
         display: none;
 
         @media screen and (max-width: 900px) {
-        display: flex;
-    }
+            display: flex;
+
+            opacity: 0;
+            transform: scale(.8);
+        }
 
         max-height: none;
 
         overflow-y: auto;
 
-        border-top: 1px solid #ebe5dc;
-        border-bottom: 1px solid #ebe5dc;
+        // border-top: 1px solid #ebe5dc;
+        // border-bottom: 1px solid #ebe5dc;
         //justify-content: flex-start;
 
         &:before,
@@ -158,7 +161,6 @@
     }
 
     &_level-1 {
-        
     }
 
     &_level-2 {
@@ -174,27 +176,26 @@
         width: 100%;
 
         box-sizing: border-box;
-        padding: 0 0 0 40px;
+        padding: 0 0 0 35px;
 
         &-plus {
-       
-                &:before,
+            &:before,
             &:after {
                 content: "";
                 position: absolute;
                 top: 22px;
-                left: 15.5px;
-        
+                left: 9.5px;
+
                 width: 15px;
                 height: 2px;
-        
+
                 border-radius: 12px;
                 background-color: #fff;
             }
-        
+
             &:after {
                 transform: rotateZ(90deg);
-        
+
                 transition: 0.3s ease transform;
             }
         }
@@ -206,6 +207,14 @@
         }
 
         &_level-0 {
+            padding: 0 0 0 50px;
+
+            > .mobile-menu__item-plus {
+                &:before,
+                &:after {
+                    left: 25.5px;
+                }
+            }
 
             &:last-child {
                 .mobile-menu__link {
@@ -217,6 +226,8 @@
         &_level-1 {
             display: flex;
             flex-direction: column;
+
+           
         }
 
         &_level-2 {
@@ -237,6 +248,7 @@
 
         //font: 18px $font-bold;
         color: #fff;
+        text-shadow: 1px 3px 20px #000;
         -webkit-font-smoothing: antialiased;
 
         transition: ease 0.3s;
@@ -245,7 +257,7 @@
 
         height: auto;
 
-        border-bottom: 1px solid #ebe5dc;
+        //border-bottom: 1px solid #ebe5dc;
         padding: 13px 8px;
 
         &_stock {
@@ -279,7 +291,7 @@
     padding: 20px;
     opacity: 0;
 
-    transition: .3s ease .3s opacity;
+    transition: 0.3s ease 0.3s opacity;
 
     &_active {
         opacity: 1;

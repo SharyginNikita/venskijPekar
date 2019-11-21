@@ -332,6 +332,8 @@ function initMenu() {
         let btnControl = document.body.querySelectorAll(
             ".header-toolbar__burger, .mobile-menu-closer"
         );
+        let header = document.body.querySelector('.header__top');
+        let main = document.body.querySelector('.main');
 
         btnControl.forEach(item => {
             item.addEventListener("click", event => {
@@ -340,6 +342,15 @@ function initMenu() {
                 btnControl.forEach(item => {
                     item.classList.toggle(`${item.classList[0]}_active`);
                 });
+
+                setTimeout(
+                    () => {
+                        header.classList.toggle('header__top_blur');
+                        main.classList.toggle('main_blur');
+                    },
+                    300
+                );
+                
             });
         });
 
@@ -414,6 +425,10 @@ class SearchMobile {
                 this.searchInput.classList.toggle(
                     `${this.searchInput.classList[0]}_active`
                 );
+
+                if(this.searchInput.value !== '') {
+                    this.searchInput.value = ''; 
+                }
                 this.searchIcon.classList.toggle(
                     `${this.searchIcon.classList[1]}_hidden`
                 );
