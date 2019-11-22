@@ -1,3 +1,16 @@
+@use '../utils/_vars.scss' as global;
+
 @forward '../../../node_modules/materialize-css/sass/components/_waves.scss';
 @forward '../../../node_modules/materialize-css/sass/components/_modal.scss';
 @forward '../../../node_modules/materialize-css/sass/components/forms/_radio-buttons.scss';
+
+[type="radio"].with-gap:checked + span::after,
+[type="radio"].with-gap:checked + span::before,
+[type="radio"]:checked + span::after {
+    border: 2px solid global.$color-acent;
+}
+
+[type="radio"].with-gap:checked + span::after,
+[type="radio"]:checked + span::after {
+    background-color: global.$color-acent;
+}

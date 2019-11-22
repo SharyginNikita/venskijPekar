@@ -14,6 +14,8 @@
     padding-bottom: 80px;
     transform: translate3d(0, 0, 0);
     filter: blur(0);
+    transition: 0.3s ease filter;
+    -webkit-transition: 0.3s ease -webkit-filter;
 
     &:after {
         z-index: -2;
@@ -44,8 +46,6 @@
 
     &_blur {
         filter: global.$blur;
-        transition: 0.3s ease filter;
-        -webkit-transition: 0.3s ease -webkit-filter;
     }
 
     &__wrapper {
