@@ -41,10 +41,102 @@
 
     &__wrapper {
         display: flex;
+
+        height: 485px;
     }
 
     &__slide {
+        position: relative;
+
+        display: flex;
         flex-shrink: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            background: rgba(0, 0, 0, 0.4);
+
+            z-index: 2;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__slide-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        box-sizing: border-box;
+        margin: auto auto;
+        padding: 70px;
+
+        max-width: 800px;
+        width: 100%;
+
+        color: #fff;
+
+        z-index: 3;
+    }
+
+    &__slide-title {
+        margin-bottom: 10px;
+
+        text-transform: uppercase;
+        text-align: center;
+        font: 400 45px global.$font-default;
+    }
+
+    &__slide-description {
+        margin-bottom: 20px;
+
+        font: 300 16px / 20px global.$font-default;
+    }
+
+    &__slide-btn {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+
+        max-width: 110px;
+        width: 100%;
+
+        box-sizing: border-box;
+        border: 2px solid global.$color-acent;
+        border-radius: 50px;
+        padding: 10px 25px;
+        background-color: #fff;
+
+        font: 700 14px global.$font-default;
+        text-transform: uppercase;
+        color: global.$color-acent;
+
+        transition: 0.1s ease !important;
+        transition-property: color, background-color;
+
+        cursor: pointer;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: global.$color-acent;
+
+                color: #fff;
+            }
+        }
     }
 
     &__prev,
@@ -76,61 +168,62 @@
 
     &__pagination {
         position: absolute;
-    
+
         display: block;
         white-space: nowrap;
         text-align: center;
-    
+
         bottom: 40px;
         left: 0;
         right: 0;
-    
+
         overflow: hidden;
-    
+
         width: 100%;
         height: 16px;
-    
+
         margin: 0 auto;
-    
+
         z-index: 2;
-      }
-    
-      &__bullet {
+    }
+
+    &__bullet {
         position: relative;
-    
+
         display: inline-block;
-    
+
         width: 16px;
         height: 100%;
-    
+
         box-sizing: border-box;
         box-shadow: global.$shadow;
         border: 3px solid global.$color-acent;
         border-radius: 50%;
         margin-right: 4px;
         background-color: #fff;
-    
+
         z-index: 3;
         //transition: 0.3s ease transform;
         cursor: pointer;
-    
-        transform: scale(.4);
-      
+
+        transform: scale(0.4);
+
         &_active {
-          transition: 0.3s ease transform;
-          transform: scale(1);
-          opacity: 1;
+            transition: 0.3s ease transform;
+            transform: scale(1);
+            opacity: 1;
         }
-    
-        &_active-prev, &_active-next {
-          transition: 0.3s ease transform;
-          transform: scale(.7);
+
+        &_active-prev,
+        &_active-next {
+            transition: 0.3s ease transform;
+            transform: scale(0.7);
         }
-    
+
         &:last-child {
-          margin: 0;
+            margin: 0;
         }
-      }
+    }
 }
 
 .home-main {
@@ -164,7 +257,7 @@
         justify-content: space-between;
 
         @media screen and (max-width: 956px) {
-           // display: grid;
+            // display: grid;
             //grid-template-columns: repeat(2, auto);
             //justify-items: center;
             //gap: 20px;
@@ -183,15 +276,14 @@
 
         margin-right: 30px;
 
-        @media(hover: hover) and (pointer: fine) {
+        @media (hover: hover) and (pointer: fine) {
             &:hover {
                 .home-stoks__card-image {
                     transform: scale(1.1);
-                    
                 }
-            }  
+            }
         }
-        
+
         &:last-child {
             margin-right: 0;
         }

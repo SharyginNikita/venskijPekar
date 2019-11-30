@@ -46,12 +46,16 @@
   &__slide {
     flex-shrink: 0;
 
-    &:last-child {
-      .card-product,
-      .card-article {
-        margin-right: 15px;
+    @media screen and (max-width: 555.9px) {
+      &:last-child {
+        .card-product,
+        .card-article {
+          margin-right: 15px;
+        }
       }
     }
+
+    
 
     @media screen and (max-width: 555.9px) {
       margin-right: 20px;
@@ -92,6 +96,10 @@
 
   &__next {
     right: -14px;
+  }
+
+  &__nav_disabled {
+    background-color: #ccc !important;
   }
 
   &__pagination {
@@ -477,7 +485,7 @@
   &__link {
     font-weight: 400;
 
-    color: #039be5;
+    color: global.$color-acent;
   }
 
   &__reveal {

@@ -89,19 +89,36 @@
         margin: 0;
         padding: 0
     }
+
+    &_favorite {
+        @media screen and (max-width: 607px) {
+            &:after, &:before {
+                display: none;
+            }
+        }
+    }
+
+
 }
 
 .description {
+    margin-top: -20px;
     margin-bottom: 50px;
 
     font-weight: 300;
     color: global.$color-gray;
+
+    @media screen and (max-width: 636px) {
+        margin-top: 0;
+    }
 
     @media screen and (max-width: 626px) {
         font-size: 13px;
 
         margin-bottom: 30px;
     }
+
+    
 
     &_center {
         text-align: center;

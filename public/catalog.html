@@ -9,7 +9,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <!--meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")-->
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/css/main.css?Fri Nov 22 2019 13:28:35 GMT+0300 (GMT+03:00)">
+    <link rel="stylesheet" href="/css/main.css?Sat Nov 30 2019 13:23:53 GMT+0300 (GMT+03:00)">
 </head>
 
 <body class="body">
@@ -20,6 +20,7 @@
                     <div class="header-toolbar__top"><a class="header-toolbar__phone-number" href="tel:88182211521">8 (8182) 21-15-21</a>
                         <div class="header-toolbar__log-in modal-trigger" data-target="modal-logIn">Войти</div>
                     </div>
+                    <form class="header-search"><input class="header-search__input" type="text" placeholder="Искать" id="search-input"><label class="header-search__label" for="search-input"><i class="material-icons-round header-search__search-icon md-search"></i></label></form>
                     <div class="header-toolbar__wrapper">
                         <div class="header-toolbar__burger">
                             <div class="header-toolbar__burger-wrap">
@@ -41,35 +42,44 @@
                     </div>
                 </div>
                 <div class="header-toolbar__search-wrap">
-                    <ul class="menu menu_level-0">
-                        <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/catalog.html">Каталог</a>
+                    <ul class="menu menu_level-0 menu_catalog">
+                        <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/catalog.html">Каталог<div class="header-toolbar__burger">
+                                    <div class="header-toolbar__burger-wrap">
+                                        <div class="header-toolbar__burger-wrapper">
+                                            <div class="header-toolbar__burger-line"></div>
+                                        </div>
+                                    </div><i class="material-icons-round md-keyboard_arrow_down header-toolbar__burger-arrow"></i>
+                                </div></a>
                             <ul class="menu menu_level-1">
-                                <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кондитерские изделия</a>
-                                    <ul class="menu menu_level-2">
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Десерты</a></li>
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Конфеты</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Пекарня</a>
-                                    <ul class="menu menu_level-2">
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Выпечка</a></li>
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Пироги</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кухня</a>
-                                    <ul class="menu menu_level-2">
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Блюда по меню</a></li>
-                                        <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Кулинария</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Упаковка / декор</a></li>
+                                <div class="menu__wrapper">
+                                    <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кондитерские изделия</a>
+                                        <ul class="menu menu_level-2">
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Десерты</a></li>
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Конфеты</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Пекарня</a>
+                                        <ul class="menu menu_level-2">
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Выпечка</a></li>
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Пироги</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Кухня</a>
+                                        <ul class="menu menu_level-2">
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Блюда по меню</a></li>
+                                            <li class="menu__item menu__item_level-2"><a class="menu__link menu__link_level-2" href="#">Кулинария</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_level-1"><a class="menu__link menu__link_level-1" href="#">Упаковка / декор</a></li>
+                                </div>
                             </ul>
                         </li>
+                    </ul>
+                    <ul class="menu menu_level-0">
                         <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/news.html">Новости</a></li>
                         <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="/contacts.html">Контакты</a></li>
                         <li class="menu__item menu__item_level-0"><a class="menu__link menu__link_level-0" href="#">Детские мастер классы</a></li>
                     </ul>
-                    <form class="header-search"><input class="header-search__input" type="text" placeholder="Искать" id="search-input"><label class="header-search__label" for="search-input"><i class="material-icons-round header-search__search-icon md-search"></i></label></form>
                 </div>
             </div>
         </div>
@@ -165,7 +175,7 @@
                             </ul>
                         </li>
                         <li class="catalog-categories__item catalog-categories__item_level-0"><a class="catalog-categories__link catalog-categories__link_level-0" href="#">Печенья</a></li>
-                    </ul><img src="https://blog.asaptickets.com/wp-content/uploads/2016/10/most-delicious-deserts-from-all-over-the-world-19-min.jpg" width="100%">
+                    </ul><img src="https://img2.goodfon.ru/original/5184x3456/f/cf/berries-cake-sweet-dessert-1306.jpg" width="100%">
                 </div>
                 <div class="catalog__wrapper">
                     <div class="catalog__wrapper-main">
@@ -469,14 +479,14 @@
                     </ul>
                 </div>
                 <div class="footer__row">
-                    <div class="footer__copyrite">© 2019 ООО «АрхКондитер». Все права защищены</div><a class="footer__privacy" href="#"> Политика конфиденциальности </a>
+                    <div class="footer__copyrite">© 2019 ООО «АрхКондитер». Все права защищены</div><a class="footer__privacy" href="https://vk.com/m_arsentev" target="_blank"> design J-SOFT </a>
                 </div>
             </div>
         </div>
     </footer><noscript>У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.</noscript>
-    <script src="/js/polyfills.js?Fri Nov 22 2019 13:28:35 GMT+0300 (GMT+03:00)"></script>
+    <script src="/js/polyfills.js?Sat Nov 30 2019 13:23:53 GMT+0300 (GMT+03:00)"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/js/main.js?Fri Nov 22 2019 13:28:35 GMT+0300 (GMT+03:00)"> </script>
+    <script src="/js/main.js?Sat Nov 30 2019 13:23:53 GMT+0300 (GMT+03:00)"> </script>
 </body>
 
 </html>

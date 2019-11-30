@@ -26,7 +26,8 @@ let productGallery = new Swiper(".product-page-gallery__slides", {
     grabCursor: true,
     navigation: {
         prevEl: ".product-page-gallery__prev",
-        nextEl: ".product-page-gallery__next"
+        nextEl: ".product-page-gallery__next",
+        disabledClass: "product-page-gallery__nav_disabled"
     },
     pagination: {
       el: ".product-page-gallery__pagination",

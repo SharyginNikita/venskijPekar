@@ -1,6 +1,7 @@
 @use '../utils/vars' as global;
 
 .modal {
+    max-width: 400px !important;
     width: 40vw !important;
     max-width: none;
     max-height: none !important;

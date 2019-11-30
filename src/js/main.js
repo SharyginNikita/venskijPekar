@@ -132,7 +132,8 @@ function initSwipers() {
         //loop: true,
         navigation: {
             nextEl: ".product-swiper__next",
-            prevEl: ".product-swiper__prev"
+            prevEl: ".product-swiper__prev",
+            disabledClass: "product-swiper__nav_disabled"
         },
         pagination: {
             el: ".product-swiper__pagination",
@@ -161,7 +162,8 @@ function initSwipers() {
         //loop: true,
         navigation: {
             nextEl: ".news-swiper__next",
-            prevEl: ".news-swiper__prev"
+            prevEl: ".news-swiper__prev",
+            disabledClass: "news-swiper__nav_disabled"
         },
         pagination: {
             el: ".news-swiper__pagination",
@@ -233,7 +235,12 @@ class Menu {
 
             elem.addEventListener("click", event => {
                 if (item) {
-                    item.classList.toggle(`${this.menu.classList[0]}_active`);
+
+                    setTimeout(
+                        () => (item.classList.toggle(`${this.menu.classList[0]}_active`)),
+                        50
+                    );
+                    
 
                     //event.preventDefault();
 
@@ -301,9 +308,9 @@ class MobileMenu {
                 elem.append(divPlus);
 
                 elem.addEventListener("click", event => {
-                    elem.classList.toggle(`${elem.classList[0]}_active`);
-
                     event.stopPropagation();
+
+                    elem.classList.toggle(`${elem.classList[0]}_active`);
 
                     let elemUl = elem.getElementsByTagName("ul")[0];
 
@@ -465,8 +472,14 @@ class SearchMobile {
                 this.searchInput.classList.toggle(
                     `${this.searchInput.classList[0]}_active`
                 );
+                this.searchIcon.classList.toggle(
+                    `${this.searchIcon.classList[1]}_hidden`
+                );
                 this.burger.classList.toggle(
                     `${this.burger.classList[0]}_search-active`
+                );
+                this.searchIconReset.classList.toggle(
+                    `${this.searchIconReset.classList[1]}_show`
                 );
                 this.body.style.overflow =
                     this.body.style.overflow === "" ? "hidden" : "";

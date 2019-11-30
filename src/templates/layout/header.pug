@@ -7,7 +7,6 @@ header.header
             img(src="/images/logo.png" width="100%").header__logo-image
 
         .header-toolbar
-
           
             .header-toolbar__bottom
 
@@ -16,6 +15,16 @@ header.header
                     a(href="tel:88182211521").header-toolbar__phone-number 8 (8182) 21-15-21
 
                     .header-toolbar__log-in(data-target="modal-logIn" class="modal-trigger") Войти
+
+                form.header-search
+
+                    input(type="text" placeholder="Искать")#search-input.header-search__input
+
+                    label.header-search__label(for="search-input")
+
+                        i.material-icons-round.header-search__search-icon.md-search
+
+                    //-i.material-icons-round.header-search__close close
 
                 .header-toolbar__wrapper
 
@@ -57,60 +66,73 @@ header.header
                         .header-toolbar__link-text Корзина
 
             .header-toolbar__search-wrap
-                ul.menu.menu_level-0
+                ul.menu.menu_level-0.menu_catalog
 
                     li.menu__item.menu__item_level-0
 
                         a(href="/catalog.html").menu__link.menu__link_level-0 Каталог
 
+                            .header-toolbar__burger
+
+                                .header-toolbar__burger-wrap
+
+                                    .header-toolbar__burger-wrapper
+
+                                        .header-toolbar__burger-line
+
+                                i.material-icons-round.md-keyboard_arrow_down.header-toolbar__burger-arrow
+                                    
                         ul.menu.menu_level-1
 
-                            li.menu__item.menu__item_level-1
+                            .menu__wrapper
 
-                                a(href="#").menu__link.menu__link_level-1 Кондитерские изделия
+                                li.menu__item.menu__item_level-1
 
-                                ul.menu.menu_level-2
+                                    a(href="#").menu__link.menu__link_level-1 Кондитерские изделия
 
-                                    li.menu__item.menu__item_level-2
+                                    ul.menu.menu_level-2
 
-                                        a(href="#").menu__link.menu__link_level-2 Десерты
+                                        li.menu__item.menu__item_level-2
 
-                                    li.menu__item.menu__item_level-2
+                                            a(href="#").menu__link.menu__link_level-2 Десерты
 
-                                        a(href="#").menu__link.menu__link_level-2 Конфеты
+                                        li.menu__item.menu__item_level-2
 
-                            li.menu__item.menu__item_level-1
+                                            a(href="#").menu__link.menu__link_level-2 Конфеты
 
-                                a(href="#").menu__link.menu__link_level-1 Пекарня
+                                li.menu__item.menu__item_level-1
 
-                                ul.menu.menu_level-2
+                                    a(href="#").menu__link.menu__link_level-1 Пекарня
 
-                                    li.menu__item.menu__item_level-2
+                                    ul.menu.menu_level-2
 
-                                        a(href="#").menu__link.menu__link_level-2 Выпечка
+                                        li.menu__item.menu__item_level-2
 
-                                    li.menu__item.menu__item_level-2
+                                            a(href="#").menu__link.menu__link_level-2 Выпечка
 
-                                        a(href="#").menu__link.menu__link_level-2 Пироги
+                                        li.menu__item.menu__item_level-2
 
-                            li.menu__item.menu__item_level-1
+                                            a(href="#").menu__link.menu__link_level-2 Пироги
 
-                                a(href="#").menu__link.menu__link_level-1 Кухня
+                                li.menu__item.menu__item_level-1
 
-                                ul.menu.menu_level-2
+                                    a(href="#").menu__link.menu__link_level-1 Кухня
 
-                                    li.menu__item.menu__item_level-2
+                                    ul.menu.menu_level-2
 
-                                        a(href="#").menu__link.menu__link_level-2 Блюда по меню
+                                        li.menu__item.menu__item_level-2
 
-                                    li.menu__item.menu__item_level-2
+                                            a(href="#").menu__link.menu__link_level-2 Блюда по меню
 
-                                        a(href="#").menu__link.menu__link_level-2 Кулинария
+                                        li.menu__item.menu__item_level-2
 
-                            li.menu__item.menu__item_level-1
+                                            a(href="#").menu__link.menu__link_level-2 Кулинария
 
-                                a(href="#").menu__link.menu__link_level-1 Упаковка / декор
+                                li.menu__item.menu__item_level-1
 
+                                    a(href="#").menu__link.menu__link_level-1 Упаковка / декор
+               
+                ul.menu.menu_level-0
                     li.menu__item.menu__item_level-0
 
                         a(href="/news.html").menu__link.menu__link_level-0 Новости
@@ -122,19 +144,9 @@ header.header
                     li.menu__item.menu__item_level-0
 
                         a(href="#").menu__link.menu__link_level-0 Детские мастер классы
-                form.header-search
-
-                    input(type="text" placeholder="Искать")#search-input.header-search__input
-
-                    label.header-search__label(for="search-input")
-
-                        i.material-icons-round.header-search__search-icon.md-search
-
-                    //-i.material-icons-round.header-search__close close
 
     nav.header-nav
 
-   
         ul.mobile-menu.mobile-menu_level-0
 
             li.mobile-menu__item.mobile-menu__item_level-0
