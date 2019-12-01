@@ -16,5 +16,22 @@
             box-sizing: border-box;
             padding: 0 15px;
         }
+
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                width: 100%;
+
+                .card-article {
+                    max-width: 300px;
+                    width: 100%;
+                    height: auto;
+
+                    margin-bottom: 30px;
+                }
+            }
     }
 }

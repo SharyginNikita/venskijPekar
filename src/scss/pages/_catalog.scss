@@ -21,6 +21,11 @@
     &__wrapper {
         flex-direction: column;
 
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+                width: 100%;
+            }
+
         &-main {
             @media screen and (max-width: 556px) {
                 padding: 0 15px;
@@ -69,6 +74,23 @@
                 grid-template-columns: 1fr;
 
                 box-sizing: border-box;
+            }
+
+            @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                width: 100%;
+
+                .card-product {
+                    max-width: 300px;
+                    width: 100%;
+                    height: auto;
+
+                    margin-bottom: 30px;
+                }
             }
         }
     }
